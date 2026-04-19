@@ -1,7 +1,11 @@
 'use client';
 
-import { useCallback, useRef, useState } from 'react';
-import { questionRepository } from '@/lib/repositories';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  progressRepository,
+  questionRepository,
+  sessionRepository,
+} from '@/lib/repositories';
 import type { QuadQuestion } from '@/lib/types/question';
 import { haptic } from '@/lib/utils/haptics';
 
@@ -18,6 +22,7 @@ interface State {
     questionId: string;
     correct: boolean;
     explanation: string;
+    topic: string;
     correctText: string;
   };
   done: boolean;
@@ -26,21 +31,40 @@ interface State {
 const ADVANCE_DURATION_MS = 320;
 
 export function useQuadQuiz() {
-  const [state, setState] = useState<State>(() => ({
-    questions: questionRepository.getQuadQuizSync({ limit: 5 }),
-    index: 0,
-    correctCount: 0,
-    selected: null,
-    phase: 'idle',
-    lastResult: null,
-    done: false,
-  }));
+  const [state, setState] = useState<State>(() => {
+    const questions = questionRepository.getQuadQuizSync({ limit: 5 });
+    return {
+      questions,
+      index: 0,
+      correctCount: 0,
+      selected: null,
+      phase: 'idle',
+      lastResult: null,
+      done: false,
+    };
+  });
 
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const clearTimers = () => {
     timers.current.forEach(clearTimeout);
     timers.current = [];
   };
+
+  // 初回マウント: セッション開始
+  const sessionStarted = useRef(false);
+  useEffect(() => {
+    if (sessionStarted.current) return;
+    if (state.questions.length === 0) return;
+    sessionRepository.start({
+      mode: 'quad',
+      questionIds: state.questions.map((q) => q.id),
+    });
+    sessionStarted.current = true;
+    return () => {
+      clearTimers();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const current = state.questions[state.index];
 
@@ -66,18 +90,32 @@ export function useQuadQuiz() {
       answeredAt: Date.now(),
       elapsedMs: 0,
     });
+    progressRepository.recordAnswer({
+      questionId: current.id,
+      subject: current.subject,
+      topic: current.topic,
+      correct,
+    });
 
-    setState((s) => ({
-      ...s,
-      correctCount: s.correctCount + (correct ? 1 : 0),
-      phase: 'feedback',
-      lastResult: {
-        questionId: current.id,
-        correct,
-        explanation: current.explanation,
-        correctText: current.choices[current.answerIndex],
-      },
-    }));
+    setState((s) => {
+      const nextCorrect = s.correctCount + (correct ? 1 : 0);
+      sessionRepository.update({
+        answeredCount: s.index + 1,
+        correctCount: nextCorrect,
+      });
+      return {
+        ...s,
+        correctCount: nextCorrect,
+        phase: 'feedback',
+        lastResult: {
+          questionId: current.id,
+          correct,
+          explanation: current.explanation,
+          topic: current.topic,
+          correctText: current.choices[current.answerIndex],
+        },
+      };
+    });
   }, [state.phase, state.selected, current]);
 
   /** 次の問題へ */
@@ -86,6 +124,7 @@ export function useQuadQuiz() {
     setState((s) => {
       const nextIdx = s.index + 1;
       const done = nextIdx >= s.questions.length;
+      if (done) sessionRepository.clear();
       return {
         ...s,
         index: nextIdx,
@@ -103,8 +142,13 @@ export function useQuadQuiz() {
 
   const restart = useCallback(() => {
     clearTimers();
+    const questions = questionRepository.getQuadQuizSync({ limit: 5 });
+    sessionRepository.start({
+      mode: 'quad',
+      questionIds: questions.map((q) => q.id),
+    });
     setState({
-      questions: questionRepository.getQuadQuizSync({ limit: 5 }),
+      questions,
       index: 0,
       correctCount: 0,
       selected: null,

@@ -131,6 +131,7 @@ export default function QuadLearnPage() {
         correct={lastResult?.correct ?? false}
         explanation={lastResult?.explanation ?? ''}
         correctText={lastResult?.correctText}
+        topic={lastResult?.topic}
         onNext={next}
       />
     </div>

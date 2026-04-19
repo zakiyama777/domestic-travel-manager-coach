@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, XCircle, ArrowRight, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,17 +10,46 @@ interface Props {
   open: boolean;
   correct: boolean;
   explanation: string;
-  correctText?: string; // 4択用: 正解選択肢の本文
+  /** 4択用: 正解選択肢の本文 */
+  correctText?: string;
+  /** 出題されたトピック名 (関連参照の案内) */
+  topic?: string;
   onNext: () => void;
 }
 
 /**
  * 画面下から滑り出るフィードバックシート。
- * - 正解: accent系 / 不正解: warning系
- * - 解説は カード化して「読んで理解する」動線を美しく
- * - CTA(次へ)は親指ゾーンに固定
+ *
+ * 情報の順序 (視線優先):
+ *   1. 判定サイン (CORRECT / INCORRECT) & ひとこと
+ *   2. [4択のみ] 正解選択肢
+ *   3. 解説本文 (関連トピック名付き)
+ *   4. 「次の問題へ」CTA (親指ゾーン)
+ *
+ * Enter / Space で「次へ」をトリガ。連打での早送りにも耐えるよう、
+ * open=false の時はキーイベントをバインドしない。
  */
-export function FeedbackSheet({ open, correct, explanation, correctText, onNext }: Props) {
+export function FeedbackSheet({
+  open,
+  correct,
+  explanation,
+  correctText,
+  topic,
+  onNext,
+}: Props) {
+  // キーボード操作で次へ (PC/iPad外付けキーボードで学習する人のため)
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onNext();
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [open, onNext]);
+
   return (
     <AnimatePresence>
       {open && (
@@ -87,8 +117,14 @@ export function FeedbackSheet({ open, correct, explanation, correctText, onNext 
                   {correct ? 'CORRECT' : 'INCORRECT'}
                 </p>
                 <h4 className="mt-0.5 text-[18px] font-semibold tracking-tight text-foreground">
-                  {correct ? '正解です。' : 'もう一歩。見直しましょう。'}
+                  {correct ? '正解です。' : '惜しい一問。解説で整えましょう。'}
                 </h4>
+                {topic && (
+                  <p className="mt-1 text-[11.5px] leading-relaxed text-muted-foreground">
+                    関連トピック:{' '}
+                    <span className="font-medium text-foreground/70">{topic}</span>
+                  </p>
+                )}
               </div>
             </div>
 
@@ -132,6 +168,9 @@ export function FeedbackSheet({ open, correct, explanation, correctText, onNext 
             >
               次の問題へ <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
             </Button>
+            <p className="mt-2 text-center text-[10.5px] text-muted-foreground/80">
+              Enter キーでも次へ進めます
+            </p>
           </motion.div>
         </>
       )}

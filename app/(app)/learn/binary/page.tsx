@@ -92,6 +92,7 @@ export default function BinaryLearnPage() {
         open={showFeedback}
         correct={lastResult?.correct ?? false}
         explanation={lastResult?.explanation ?? ''}
+        topic={lastResult?.topic}
         onNext={next}
       />
     </div>

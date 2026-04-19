@@ -2,12 +2,15 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ChevronLeft, Check } from 'lucide-react';
+import { ChevronLeft, Check, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useUser } from '@/features/user/user-provider';
+import { progressRepository, sessionRepository } from '@/lib/repositories';
 import { cn } from '@/lib/utils/cn';
 import { examStatus, formatJPDate, isValidDate } from '@/lib/utils/date';
+
+const APP_VERSION = '0.1.0 (UI 基盤 v1.5)';
 
 const GOAL_PRESETS = [
   { q: 15, m: 10, label: 'ライト', desc: '毎日 3 分から' },
@@ -30,6 +33,16 @@ export default function SettingsPage() {
   const [goal, setGoal] = useState<{ m: number; q: number }>({ m: 15, q: 20 });
   const [saving, setSaving] = useState(false);
   const [justSaved, setJustSaved] = useState(false);
+  const [confirmReset, setConfirmReset] = useState(false);
+  const [justReset, setJustReset] = useState(false);
+
+  const resetLearningData = () => {
+    progressRepository.resetAll();
+    sessionRepository.clear();
+    setConfirmReset(false);
+    setJustReset(true);
+    setTimeout(() => setJustReset(false), 1800);
+  };
 
   useEffect(() => {
     if (!user) return;
@@ -186,6 +199,66 @@ export default function SettingsPage() {
         </p>
         <p className="mt-1 text-[12.5px] text-muted-foreground">
           通知リマインド · ダークモード · プレミアムプランは次回アップデートで。
+        </p>
+      </div>
+
+      {/* Danger Zone : 学習データを初期化 */}
+      <Section label="学習データの管理" hint="端末に保存された進捗のみを初期化します。">
+        <div className="rounded-2xl border border-warning/30 bg-warning/[0.06] p-4">
+          <div className="flex items-start gap-2.5">
+            <AlertTriangle
+              className="mt-0.5 h-4 w-4 shrink-0 text-warning"
+              strokeWidth={2.2}
+            />
+            <div className="flex-1">
+              <p className="text-[13px] font-semibold text-foreground/90">
+                学習の履歴を初期化
+              </p>
+              <p className="mt-0.5 text-[11.5px] leading-relaxed text-muted-foreground">
+                日次進捗 · 連続日数 · 問題ごとの正答率 · 再開情報を、この端末から削除します。
+                アカウントや呼び名は残ります。
+              </p>
+            </div>
+          </div>
+          <div className="mt-3 flex items-center gap-2">
+            {justReset ? (
+              <p className="text-[12px] font-medium text-accent">
+                初期化しました。お疲れさまでした。
+              </p>
+            ) : !confirmReset ? (
+              <button
+                onClick={() => setConfirmReset(true)}
+                className="rounded-full border border-warning/60 bg-white px-3 py-1.5 font-display text-[12px] font-semibold text-warning tap-highlight hover:bg-warning/10"
+              >
+                初期化する
+              </button>
+            ) : (
+              <>
+                <button
+                  onClick={resetLearningData}
+                  className="rounded-full bg-warning px-3 py-1.5 font-display text-[12px] font-semibold text-white shadow-soft tap-highlight"
+                >
+                  本当に初期化する
+                </button>
+                <button
+                  onClick={() => setConfirmReset(false)}
+                  className="rounded-full bg-muted px-3 py-1.5 font-display text-[12px] font-medium text-foreground/70 tap-highlight"
+                >
+                  やめる
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      </Section>
+
+      {/* アプリ情報 */}
+      <div className="px-1 pb-4 text-center">
+        <p className="font-display text-[10.5px] font-bold tracking-[0.22em] text-muted-foreground">
+          TABI · STUDY
+        </p>
+        <p className="mt-0.5 text-[11px] tabular-nums text-muted-foreground/80">
+          version {APP_VERSION}
         </p>
       </div>
 

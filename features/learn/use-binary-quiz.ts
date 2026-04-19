@@ -1,7 +1,11 @@
 'use client';
 
-import { useCallback, useRef, useState } from 'react';
-import { questionRepository } from '@/lib/repositories';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  progressRepository,
+  questionRepository,
+  sessionRepository,
+} from '@/lib/repositories';
 import type { BinaryQuestion } from '@/lib/types/question';
 import { haptic } from '@/lib/utils/haptics';
 
@@ -30,6 +34,7 @@ interface State {
     questionId: string;
     correct: boolean;
     explanation: string;
+    topic: string;
     /** 回答方向。カードをどちらに飛ばすかに使う */
     direction: 'left' | 'right';
   };
@@ -40,14 +45,17 @@ const EXIT_DURATION_MS = 360; // カードが飛ぶ演出の長さ
 const ADVANCE_DURATION_MS = 320;
 
 export function useBinaryQuiz() {
-  const [state, setState] = useState<State>(() => ({
-    questions: questionRepository.getBinaryQuizSync({ limit: 8 }),
-    index: 0,
-    correctCount: 0,
-    phase: 'idle',
-    lastResult: null,
-    done: false,
-  }));
+  const [state, setState] = useState<State>(() => {
+    const questions = questionRepository.getBinaryQuizSync({ limit: 8 });
+    return {
+      questions,
+      index: 0,
+      correctCount: 0,
+      phase: 'idle',
+      lastResult: null,
+      done: false,
+    };
+  });
 
   /** タイマーを抱えておき、unmount/restart時に確実にクリア */
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -55,6 +63,22 @@ export function useBinaryQuiz() {
     timers.current.forEach(clearTimeout);
     timers.current = [];
   };
+
+  // 初回マウント時にセッション開始 (localStorage)
+  const sessionStarted = useRef(false);
+  useEffect(() => {
+    if (sessionStarted.current) return;
+    if (state.questions.length === 0) return;
+    sessionRepository.start({
+      mode: 'binary',
+      questionIds: state.questions.map((q) => q.id),
+    });
+    sessionStarted.current = true;
+    return () => {
+      clearTimers();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const current = state.questions[state.index];
 
@@ -69,25 +93,41 @@ export function useBinaryQuiz() {
       const correct = ans === current.answer;
       haptic(correct ? 'success' : 'error');
 
+      // リポジトリへ記録 (mock submit + progress の永続化)
       void questionRepository.submitAnswer({
         questionId: current.id,
         correct,
         answeredAt: Date.now(),
         elapsedMs: 0,
       });
+      progressRepository.recordAnswer({
+        questionId: current.id,
+        subject: current.subject,
+        topic: current.topic,
+        correct,
+      });
 
       // Step 1: exiting に遷移 (カード飛ぶアニメ)
-      setState((s) => ({
-        ...s,
-        phase: 'exiting',
-        correctCount: s.correctCount + (correct ? 1 : 0),
-        lastResult: {
-          questionId: current.id,
-          correct,
-          explanation: current.explanation,
-          direction: ans ? 'right' : 'left',
-        },
-      }));
+      setState((s) => {
+        const nextCorrect = s.correctCount + (correct ? 1 : 0);
+        // セッション更新 (再開情報)
+        sessionRepository.update({
+          answeredCount: s.index + 1,
+          correctCount: nextCorrect,
+        });
+        return {
+          ...s,
+          phase: 'exiting',
+          correctCount: nextCorrect,
+          lastResult: {
+            questionId: current.id,
+            correct,
+            explanation: current.explanation,
+            topic: current.topic,
+            direction: ans ? 'right' : 'left',
+          },
+        };
+      });
 
       // Step 2: exit完了後、feedback シート表示
       const t = setTimeout(() => {
@@ -108,6 +148,10 @@ export function useBinaryQuiz() {
     setState((s) => {
       const nextIdx = s.index + 1;
       const done = nextIdx >= s.questions.length;
+      if (done) {
+        // セッション完了 → 再開情報はクリア
+        sessionRepository.clear();
+      }
       return {
         ...s,
         index: nextIdx,
@@ -125,8 +169,13 @@ export function useBinaryQuiz() {
 
   const restart = useCallback(() => {
     clearTimers();
+    const questions = questionRepository.getBinaryQuizSync({ limit: 8 });
+    sessionRepository.start({
+      mode: 'binary',
+      questionIds: questions.map((q) => q.id),
+    });
     setState({
-      questions: questionRepository.getBinaryQuizSync({ limit: 8 }),
+      questions,
       index: 0,
       correctCount: 0,
       phase: 'idle',

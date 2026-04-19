@@ -1,0 +1,55 @@
+{
+  "name": "Tabi Study — 国内旅行業務取扱管理者",
+  "short_name": "Tabi Study",
+  "description": "国内旅行業務取扱管理者試験のための、1日3分から続けられる静かな学習アプリ。",
+  "lang": "ja",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F9F8F4",
+  "theme_color": "#F9F8F4",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "2 択を始める",
+      "short_name": "2 択",
+      "description": "○ × 形式の演習をすぐ始める",
+      "url": "/learn/binary",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "復習を見る",
+      "short_name": "復習",
+      "description": "弱点マップから復習",
+      "url": "/review",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

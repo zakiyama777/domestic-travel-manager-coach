@@ -8,18 +8,27 @@ import { TodayActionCard } from '@/components/dashboard/today-action-card';
 import { WeeklyChart } from '@/components/dashboard/weekly-chart';
 import { WeaknessTop5 } from '@/components/dashboard/weakness-top5';
 import { SubjectMastery } from '@/components/dashboard/subject-mastery';
+import { ResumeCard } from '@/components/dashboard/resume-card';
 import { useUser } from '@/features/user/user-provider';
-import { statsRepository } from '@/lib/repositories';
+import { getResumableSession, sessionRepository, statsRepository } from '@/lib/repositories';
 import type { DashboardSummary } from '@/lib/types/stats';
+import type { LearningSession } from '@/lib/types/session';
 import { examStatus, formatJPDate } from '@/lib/utils/date';
 
 export default function DashboardPage() {
   const { user } = useUser();
   const [data, setData] = useState<DashboardSummary | null>(null);
+  const [resume, setResume] = useState<LearningSession | null>(null);
 
   useEffect(() => {
     statsRepository.getDashboard().then(setData);
+    setResume(getResumableSession());
   }, []);
+
+  const dismissResume = () => {
+    sessionRepository.clear();
+    setResume(null);
+  };
 
   if (!user || !data) {
     return <DashboardSkeleton />;
@@ -50,6 +59,9 @@ export default function DashboardPage() {
         </h1>
         <ExamLine status={status} />
       </header>
+
+      {/* 1a. 続きから (存在するときだけ) */}
+      {resume && <ResumeCard session={resume} onDismiss={dismissResume} />}
 
       {/* 1. 視線集中CTA: 今日の1問目 */}
       <TodayActionCard action={data.recommendedAction} />
