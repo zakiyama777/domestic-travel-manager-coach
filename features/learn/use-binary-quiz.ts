@@ -6,6 +6,8 @@ import {
   questionRepository,
   sessionRepository,
 } from '@/lib/repositories';
+import { schedulePushProgress } from '@/lib/repositories/firebase/progress.firebase';
+import { schedulePushSession } from '@/lib/repositories/firebase/session.firebase';
 import type { BinaryQuestion } from '@/lib/types/question';
 import { haptic } from '@/lib/utils/haptics';
 
@@ -73,6 +75,7 @@ export function useBinaryQuiz() {
       mode: 'binary',
       questionIds: state.questions.map((q) => q.id),
     });
+    schedulePushSession();
     sessionStarted.current = true;
     return () => {
       clearTimers();
@@ -106,6 +109,8 @@ export function useBinaryQuiz() {
         topic: current.topic,
         correct,
       });
+      // Firestore へのバックグラウンド同期 (debounce)
+      schedulePushProgress();
 
       // Step 1: exiting に遷移 (カード飛ぶアニメ)
       setState((s) => {
@@ -115,6 +120,7 @@ export function useBinaryQuiz() {
           answeredCount: s.index + 1,
           correctCount: nextCorrect,
         });
+        schedulePushSession();
         return {
           ...s,
           phase: 'exiting',
@@ -151,6 +157,7 @@ export function useBinaryQuiz() {
       if (done) {
         // セッション完了 → 再開情報はクリア
         sessionRepository.clear();
+        schedulePushSession();
       }
       return {
         ...s,
@@ -174,6 +181,7 @@ export function useBinaryQuiz() {
       mode: 'binary',
       questionIds: questions.map((q) => q.id),
     });
+    schedulePushSession();
     setState({
       questions,
       index: 0,

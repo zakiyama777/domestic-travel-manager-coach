@@ -1,18 +1,27 @@
 /**
  * Repository DI entry point.
+ * ================================================================
+ *  Tabi Study のデータアクセス層。"local-first + cloud mirror" を基本方針とする。
  *
- * ここで mock 実装と firebase 実装を切り替える。
- * Firebase 有効化時の想定:
- *   export { questionRepositoryFirebase as questionRepository } from './firebase/question.firebase';
- *   export { statsRepositoryFirebase    as statsRepository    } from './firebase/stats.firebase';
- *   export { userRepositoryFirebase     as userRepository     } from './firebase/user.firebase';
+ *  - question / stats  : 現状は mock。Firebase 切替時に差し替え予定。
+ *  - user              : hybrid (local を即時書き / Firestore に非同期 mirror)。
+ *                        Firebase 未設定時は local のみで動作する。
+ *  - progress / session: local が正本。Firestore はあくまでミラー
+ *                        (use-*-quiz 内で schedulePush* が呼ばれる)。
  *
- * progress / session は「端末ローカルで完結させるほうが UX が良い」データ
- * なので、本番でも localStorage を優先的に残す想定 (必要に応じ Firestore ミラー)。
+ *  UI からは常に `userRepository` / `progressRepository` / `sessionRepository`
+ *  をインポートする。 Firebase 切替は index.ts 1 箇所で完結する。
+ * ================================================================
  */
+
 export { questionRepository } from './question.repository';
 export { statsRepository } from './stats.repository';
-export { userRepository } from './user.repository';
+
+// userRepository は hybrid 版を active にする (Firebase 未設定時は local only)
+export { userRepositoryFirebase as userRepository } from './firebase/user.firebase';
+// ローカル専用版が必要な場面 (migration / settings の reset 等) で直接利用
+export { userRepository as userRepositoryLocal } from './user.repository';
+
 export { progressRepository } from './progress.repository';
 export { sessionRepository, getResumableSession } from './session.repository';
 

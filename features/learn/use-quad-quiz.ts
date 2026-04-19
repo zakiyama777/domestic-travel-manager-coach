@@ -6,6 +6,8 @@ import {
   questionRepository,
   sessionRepository,
 } from '@/lib/repositories';
+import { schedulePushProgress } from '@/lib/repositories/firebase/progress.firebase';
+import { schedulePushSession } from '@/lib/repositories/firebase/session.firebase';
 import type { QuadQuestion } from '@/lib/types/question';
 import { haptic } from '@/lib/utils/haptics';
 
@@ -59,6 +61,7 @@ export function useQuadQuiz() {
       mode: 'quad',
       questionIds: state.questions.map((q) => q.id),
     });
+    schedulePushSession();
     sessionStarted.current = true;
     return () => {
       clearTimers();
@@ -96,6 +99,7 @@ export function useQuadQuiz() {
       topic: current.topic,
       correct,
     });
+    schedulePushProgress();
 
     setState((s) => {
       const nextCorrect = s.correctCount + (correct ? 1 : 0);
@@ -103,6 +107,7 @@ export function useQuadQuiz() {
         answeredCount: s.index + 1,
         correctCount: nextCorrect,
       });
+      schedulePushSession();
       return {
         ...s,
         correctCount: nextCorrect,
@@ -124,7 +129,10 @@ export function useQuadQuiz() {
     setState((s) => {
       const nextIdx = s.index + 1;
       const done = nextIdx >= s.questions.length;
-      if (done) sessionRepository.clear();
+      if (done) {
+        sessionRepository.clear();
+        schedulePushSession();
+      }
       return {
         ...s,
         index: nextIdx,
@@ -147,6 +155,7 @@ export function useQuadQuiz() {
       mode: 'quad',
       questionIds: questions.map((q) => q.id),
     });
+    schedulePushSession();
     setState({
       questions,
       index: 0,

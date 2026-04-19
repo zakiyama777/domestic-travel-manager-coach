@@ -7,7 +7,8 @@
 - Next.js 14 (App Router) / React 18 / TypeScript
 - Tailwind CSS / shadcn/ui
 - Framer Motion
-- Data layer: Repository pattern (現在は in-memory mock + localStorage、将来 Firestore 差し替え)
+- Firebase Auth (Anonymous) + Firestore (cloud mirror, env 未設定時は local-only にフォールバック)
+- Data layer: Repository pattern (local-first、Firestore はミラー)
 
 ## Getting Started
 
@@ -48,12 +49,21 @@ lib/
   types/ constants/ utils/
 ```
 
+## Firebase 連携
+
+Firebase Auth (Anonymous) + Firestore を使った **クラウド同期** を内蔵しています。
+設定は任意で、未設定時は local-only モードで動作します。
+
+設定手順: [`docs/firebase-setup.md`](./docs/firebase-setup.md) を参照してください。
+
 ## Roadmap
 
-- [x] UI 基盤 v1 (本 PR)
-- [ ] Firebase Auth / Firestore 接続
+- [x] UI 基盤 v1 (初期 PR)
+- [x] UI 基盤 v1.5 (PWA / progress / session 永続化)
+- [x] Firebase Anonymous Auth + Firestore mirror (本 PR)
+- [ ] Google / Email Sign-In (匿名 uid マージ含む)
 - [ ] 弱点分析アルゴリズム (SM-2 / 忘却曲線)
-- [ ] PWA 化 (Service Worker, manifest)
+- [ ] Service Worker によるオフライン配信
 - [ ] PDF 問題インポート基盤
 - [ ] 通知リマインド / 課金導線
 

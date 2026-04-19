@@ -6,11 +6,13 @@ import { ChevronLeft, Check, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useUser } from '@/features/user/user-provider';
+import { useAuth } from '@/lib/hooks/use-auth';
+import { useSyncStatus } from '@/features/sync/sync-status';
 import { progressRepository, sessionRepository } from '@/lib/repositories';
 import { cn } from '@/lib/utils/cn';
 import { examStatus, formatJPDate, isValidDate } from '@/lib/utils/date';
 
-const APP_VERSION = '0.1.0 (UI 基盤 v1.5)';
+const APP_VERSION = '0.1.0 (UI 基盤 v2 — Firebase 同期)';
 
 const GOAL_PRESETS = [
   { q: 15, m: 10, label: 'ライト', desc: '毎日 3 分から' },
@@ -27,6 +29,8 @@ const GOAL_PRESETS = [
 export default function SettingsPage() {
   const router = useRouter();
   const { user, updateProfile } = useUser();
+  const auth = useAuth();
+  const sync = useSyncStatus();
 
   const [displayName, setDisplayName] = useState('');
   const [examDateInput, setExamDateInput] = useState('');
@@ -39,6 +43,13 @@ export default function SettingsPage() {
   const resetLearningData = () => {
     progressRepository.resetAll();
     sessionRepository.clear();
+    // クラウド側も初期化済みを反映 (debounce 書き込み)
+    void import('@/lib/repositories/firebase/progress.firebase').then((m) =>
+      m.flushPushProgress(),
+    );
+    void import('@/lib/repositories/firebase/session.firebase').then((m) =>
+      m.pushSession(),
+    );
     setConfirmReset(false);
     setJustReset(true);
     setTimeout(() => setJustReset(false), 1800);
@@ -190,6 +201,14 @@ export default function SettingsPage() {
             );
           })}
         </div>
+      </Section>
+
+      {/* 同期ステータス (クラウド保存) */}
+      <Section
+        label="データの保存先"
+        hint="学習の記録は端末に保存され、可能ならクラウドにも自動で同期されます。"
+      >
+        <SyncStatusCard auth={auth} sync={sync} />
       </Section>
 
       {/* 将来の差込口 (プレースホルダ) */}
@@ -347,5 +366,119 @@ function ExamPreview({ status }: { status: ReturnType<typeof examStatus> }) {
       <span className="font-display font-semibold text-primary">{status.days}</span> 日
       <span className="ml-1 text-muted-foreground">({formatJPDate(status.date)})</span>
     </p>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* 同期ステータス表示                                                   */
+/* ------------------------------------------------------------------ */
+function SyncStatusCard({
+  auth,
+  sync,
+}: {
+  auth: ReturnType<typeof useAuth>;
+  sync: ReturnType<typeof useSyncStatus>;
+}) {
+  // Firebase 未設定
+  if (!auth.firebaseConfigured) {
+    return (
+      <div className="rounded-2xl border border-border/70 bg-white p-4">
+        <div className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground" aria-hidden />
+          <p className="font-display text-[11px] font-bold tracking-[0.2em] text-foreground/70">
+            ローカル保存
+          </p>
+        </div>
+        <p className="mt-1.5 text-[12.5px] leading-relaxed text-muted-foreground">
+          現在この端末にのみ学習データを保存しています。
+          クラウド同期を有効にするには、管理者が Firebase 環境変数を設定する必要があります。
+        </p>
+      </div>
+    );
+  }
+
+  // 初期化中 or local-only (接続失敗)
+  if (auth.status === 'initializing') {
+    return (
+      <div className="rounded-2xl border border-border/70 bg-white p-4">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 animate-pulse-soft rounded-full bg-primary" aria-hidden />
+          <p className="font-display text-[11px] font-bold tracking-[0.2em] text-primary">
+            接続中…
+          </p>
+        </div>
+        <p className="mt-1.5 text-[12.5px] leading-relaxed text-muted-foreground">
+          クラウドへの接続を確認しています。
+        </p>
+      </div>
+    );
+  }
+
+  if (auth.status === 'local-only') {
+    return (
+      <div className="rounded-2xl border border-border/70 bg-white p-4">
+        <div className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground" aria-hidden />
+          <p className="font-display text-[11px] font-bold tracking-[0.2em] text-foreground/70">
+            ローカル保存
+          </p>
+        </div>
+        <p className="mt-1.5 text-[12.5px] leading-relaxed text-muted-foreground">
+          現在はこの端末にのみ保存しています。オンラインに戻ると自動でクラウド同期を再開します。
+        </p>
+      </div>
+    );
+  }
+
+  // anonymous / authenticated
+  const label =
+    sync.state === 'syncing'
+      ? '同期中…'
+      : sync.state === 'failed'
+        ? '同期を一時停止'
+        : '同期済み';
+  const dotClass =
+    sync.state === 'syncing'
+      ? 'bg-primary animate-pulse-soft'
+      : sync.state === 'failed'
+        ? 'bg-warning'
+        : 'bg-accent';
+  const textClass =
+    sync.state === 'failed' ? 'text-warning' : 'text-accent';
+
+  const description =
+    auth.status === 'anonymous'
+      ? '匿名ユーザーとしてクラウドに記録しています。'
+      : 'クラウドに記録しています。';
+
+  return (
+    <div className="rounded-2xl border border-border/70 bg-white p-4">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className={cn('h-2 w-2 rounded-full', dotClass)} aria-hidden />
+          <p
+            className={cn(
+              'font-display text-[11px] font-bold tracking-[0.2em]',
+              textClass,
+            )}
+          >
+            {label}
+          </p>
+        </div>
+        <p className="font-display text-[10px] font-bold tracking-[0.2em] text-muted-foreground/80">
+          CLOUD
+        </p>
+      </div>
+      <p className="mt-1.5 text-[12.5px] leading-relaxed text-muted-foreground">
+        {description}
+        {sync.state === 'failed' &&
+          ' ネットワーク状況が改善すると自動で再試行されます。'}
+      </p>
+      {auth.uid && (
+        <p className="mt-2 truncate text-[10.5px] tabular-nums text-muted-foreground/70">
+          id: {auth.uid.slice(0, 8)}…
+        </p>
+      )}
+    </div>
   );
 }

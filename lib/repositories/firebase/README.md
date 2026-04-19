@@ -1,48 +1,104 @@
-# Firebase Implementation Skeleton
+# Firebase Integration — Tabi Study
 
-このディレクトリは **将来の Firebase / Firestore 差し替え用プレースホルダ** です。
-現在はすべての Repository が `lib/repositories/*.repository.ts` (localStorage / in-memory mock)
-で実装されています。
+このディレクトリは **Firebase (Auth + Firestore) 連携の実装本体** です。
+Tabi Study は「local-first + cloud mirror」方針で運用しています。
 
-## 切り替えの手順 (予定)
+## 役割分担
 
-1. `firebase` SDK を `package.json` に追加 (`firebase` v10 系)
-2. `lib/firebase/client.ts` を作成し `initializeApp` + `getFirestore` / `getAuth` を export
-3. 以下のファイルを作成 (シグネチャは `lib/repositories/types.ts` を満たす):
-   - `question.firebase.ts` — `questions/` コレクション参照
-   - `stats.firebase.ts` — `users/{uid}/stats` を集計
-   - `user.firebase.ts` — `users/{uid}` ドキュメント + `onAuthStateChanged`
-4. `lib/repositories/index.ts` の import を差し替える:
+| ファイル | 役割 |
+|---|---|
+| `user.firebase.ts` | `UserRepository` の hybrid 実装。ローカル即時反映 + Firestore 非同期書き込み |
+| `progress.firebase.ts` | 学習進捗の Firestore ミラー (debounce push + 差分 pull) |
+| `session.firebase.ts` | 中断セッションの Firestore ミラー |
 
-   ```ts
-   export { questionRepositoryFirebase as questionRepository } from './firebase/question.firebase';
-   export { statsRepositoryFirebase   as statsRepository   } from './firebase/stats.firebase';
-   export { userRepositoryFirebase    as userRepository    } from './firebase/user.firebase';
-   ```
+いずれも **ローカル (`localStorage`) が正本** で、Firestore はミラーに徹します。
+Firebase が使えない場合 (env 未設定 / ネット断 / init 失敗) は、
+`getFirebase()` / `currentUid()` が `null` を返すことで自動的に no-op になります。
 
-5. `progress` / `session` は **端末ローカル優先** のまま残す想定です
-   (オフラインファースト + 起動速度のため)。必要であれば Firestore へミラーリングする
-   `progress.mirror.firebase.ts` を追加します。
+## ディレクトリ全体像
 
-## コレクション設計 (下書き)
+```
+lib/
+  firebase/
+    client.ts            # initializeApp + singleton
+    config.ts            # env 読み込み + isFirebaseConfigured
+    auth.ts              # ensureAnonymousUser (timeout 付き)
+    firestore-paths.ts   # users/{uid}/... の doc ref を集約
+  repositories/
+    index.ts             # DI entry. user は hybrid 版を active にする
+    user.repository.ts        # local 専用 (hybrid の下請け + migration)
+    progress.repository.ts    # local 専用 (UI が sync で参照)
+    session.repository.ts     # local 専用
+    firebase/
+      user.firebase.ts
+      progress.firebase.ts
+      session.firebase.ts
+features/
+  auth/auth-provider.tsx      # 起動時に匿名サインイン (タイムアウト付)
+  sync/sync-coordinator.tsx   # 初回 pull/push と migration の実行
+  sync/sync-status.ts         # UI 表示用の同期状態ストア
+```
+
+## データモデル (現状 MVP)
 
 ```
 users/{uid}
-  displayName, examDate, dailyGoalMinutes, dailyGoalQuestions, onboarded, createdAt
+  id, displayName, examDate, dailyGoalMinutes, dailyGoalQuestions,
+  onboarded, createdAt, updatedAt (serverTimestamp), appVersion
 
-users/{uid}/answers/{answerId}
-  questionId, correct, answeredAt, elapsedMs
+users/{uid}/progress/state
+  state: {
+    daily: { "yyyy-mm-dd": { answered, correct, estimatedMinutes } },
+    byQuestion: { [questionId]: { attempts, correct, lastAnsweredAt, subject, topic } },
+    streak: { lastDate, days },
+    totals: { answered, correct },
+  }
+  updatedAtMs  (ms, client clock, 比較用)
+  updatedAt    (serverTimestamp)
+  schemaVersion
 
-users/{uid}/stats/daily/{yyyy-mm-dd}
-  answered, correct, estimatedMinutes
-
-questions/{questionId}
-  format, subject, topic, statement | prompt, answer(Boolean) | answerIndex, explanation, difficulty
+users/{uid}/sessions/active
+  mode: "binary" | "quad"
+  questionIds: string[]
+  answeredCount, correctCount
+  startedAt (ms, client clock)
+  updatedAtMs
+  updatedAt (serverTimestamp)
 ```
 
-## 注意
+> 将来、日次の時系列分析を厚くするときは
+> `users/{uid}/progress/{yyyy-mm-dd}` に分割する予定です。
+> 現状は「1 ドキュメントまとめて同期」で十分な情報量に抑えています。
 
-- 本ディレクトリ配下のファイルは **まだ import されていません** (ビルドに影響しません)
-- 実装着手時は必ず `types.ts` を見て interface を一致させる
-- ルールはクライアント側で `submitAnswer` から直接書かず、Cloud Functions 経由で
-  スコアリング + 書き込みするのが推奨 (改竄防止)
+## Migration
+
+`features/sync/sync-coordinator.tsx` が auth 確立後に 1 度だけ
+
+1. Firestore から profile / progress / session を **pull**
+   - 初期比較: `remote.totals.answered > local.totals.answered` または
+     `local.totals.answered === 0` ならローカルを上書き (last-write-wins)
+2. 端末に `uid → migrated = true` を記録 (`tabi-study:firebase-migrated:v1`)
+3. ローカルに有効データがあれば Firestore に push
+
+...を実行します。失敗しても local は無傷なので UX に影響しません。
+
+## Google / Email へ拡張する場合
+
+1. `lib/firebase/auth.ts` に `signInWithGoogle()` / `signInWithEmail()` を追加
+2. `AuthProvider` の `status` は `'authenticated'` に昇格
+3. 匿名 uid と認証済 uid のマージは別スプリントで設計
+   (Firebase の [Account Linking](https://firebase.google.com/docs/auth/web/account-linking) 相当)
+
+## 注意点
+
+- `progress.firebase.ts` / `session.firebase.ts` では
+  Firestore 側のデータを localStorage に **直接書き戻し**ている箇所があります
+  (ローカルリポジトリの interface には「setAll」がないため、スキーマキーを決め打ち)。
+  これに依存しているキー:
+  - `tabi-study:progress:v1`
+  - `tabi-study:session:v1`
+  スキーマ version を上げるときは両方同時に更新してください。
+
+- **submitAnswer の直接書き込み** はやっていません。回答は常に
+  progressRepository に集約し、その内容をまとめて push しています。
+  将来 Cloud Functions で改竄検知を入れるときはここを専用 API に差し替えます。

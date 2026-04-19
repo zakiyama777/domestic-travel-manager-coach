@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { UserProvider } from '@/features/user/user-provider';
+import { AuthProvider } from '@/features/auth/auth-provider';
+import { SyncCoordinator } from '@/features/sync/sync-coordinator';
 
 export const metadata: Metadata = {
   title: 'Tabi Study — 国内旅行業務取扱管理者',
@@ -42,7 +44,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className="h-full">
       <body className="min-h-[100dvh] bg-background text-foreground">
-        <UserProvider>{children}</UserProvider>
+        <AuthProvider>
+          <UserProvider>
+            <SyncCoordinator />
+            {children}
+          </UserProvider>
+        </AuthProvider>
       </body>
     </html>
   );

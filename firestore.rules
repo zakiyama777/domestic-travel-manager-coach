@@ -1,0 +1,28 @@
+rules_version = '2';
+
+// =====================================================================
+// Tabi Study — Firestore Security Rules (MVP)
+// ---------------------------------------------------------------------
+//  - 認証済みユーザーは自分の `users/{uid}` 配下だけ read / write 可能
+//  - 他人のデータは一切アクセス不可
+//  - 本番公開時は必ず改めて `firebase deploy --only firestore:rules`
+//  - 匿名認証でも uid は割り当てられるため、このルールで十分保護される
+// =====================================================================
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 自分のドキュメント群
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+
+      match /{subPath=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // 他はすべて拒否 (デフォルト)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
