@@ -24,8 +24,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問1） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問1",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-02",
@@ -43,8 +48,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 法令 問2） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問2",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-03",
@@ -62,8 +72,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 法令 問3） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問3",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-04",
@@ -81,8 +96,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 法令 問4） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問4",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-05",
@@ -100,8 +120,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 法令 問5） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問5",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-06",
@@ -119,8 +144,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 法令 問6） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問6",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-07",
@@ -138,8 +168,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問7） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問7",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-08",
@@ -157,8 +192,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問8） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問8",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-09",
@@ -176,8 +216,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 法令 問9） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問9",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-10",
@@ -195,8 +240,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 法令 問10） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問10",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-11",
@@ -214,8 +264,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 法令 問11） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問11",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-12",
@@ -233,8 +288,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 法令 問12） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問12",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-13",
@@ -252,8 +312,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 法令 問13） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問13",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-14",
@@ -271,8 +336,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問14） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問14",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-15",
@@ -290,8 +360,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 法令 問15） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問15",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-16",
@@ -309,8 +384,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 法令 問16） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問16",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-17",
@@ -328,8 +408,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 法令 問17） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問17",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-18",
@@ -347,8 +432,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 法令 問18） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問18",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-19",
@@ -366,8 +456,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問19） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問19",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-20",
@@ -385,8 +480,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 法令 問20） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問20",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-21",
@@ -404,8 +504,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 法令 問21） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問21",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-22",
@@ -423,8 +528,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 法令 問22） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問22",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-23",
@@ -442,8 +552,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問23） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問23",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-24",
@@ -461,8 +576,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 法令 問24） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問24",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-law-25",
@@ -480,8 +600,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 法令 問25） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 旅行業法 問25",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-01",
@@ -499,8 +624,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問1） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問1",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-02",
@@ -518,8 +648,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 約款 問2） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問2",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-03",
@@ -537,8 +672,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 約款 問3） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問3",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-04",
@@ -556,8 +696,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 約款 問4） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問4",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-05",
@@ -575,8 +720,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 約款 問5） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問5",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-06",
@@ -594,8 +744,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問6） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問6",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-07",
@@ -613,8 +768,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 約款 問7） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問7",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-08",
@@ -632,8 +792,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 約款 問8） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問8",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-09",
@@ -651,8 +816,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 約款 問9） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問9",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-10",
@@ -670,8 +840,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 約款 問10） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問10",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-11",
@@ -689,8 +864,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 約款 問11） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問11",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-12",
@@ -708,8 +888,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問12） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問12",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-13",
@@ -727,8 +912,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 約款 問13） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問13",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-14",
@@ -746,8 +936,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問14） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問14",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-15",
@@ -765,8 +960,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問15） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問15",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-16",
@@ -784,8 +984,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 約款 問16） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問16",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-17",
@@ -803,8 +1008,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 約款 問17） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問17",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-18",
@@ -822,8 +1032,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問18） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問18",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-19",
@@ -841,8 +1056,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 約款 問19） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問19",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-20",
@@ -860,8 +1080,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 約款 問20） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問20",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-21",
@@ -879,8 +1104,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 約款 問21） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問21",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-22",
@@ -898,8 +1128,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 約款 問22） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問22",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-23",
@@ -917,8 +1152,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 約款 問23） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問23",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-24",
@@ -936,8 +1176,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 約款 問24） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問24",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-terms-25",
@@ -955,8 +1200,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 約款 問25） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。",
       "sourceLabel": "令和5年度 約款 問25",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-01",
@@ -974,8 +1224,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問1） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問1",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-02",
@@ -993,8 +1248,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問2） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問2",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-03",
@@ -1012,8 +1272,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問3） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問3",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-04",
@@ -1031,8 +1296,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問4） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問4",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-05",
@@ -1050,8 +1320,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問5） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問5",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-06",
@@ -1069,8 +1344,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問6） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問6",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-07",
@@ -1088,8 +1368,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問7） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問7",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-08",
@@ -1107,8 +1392,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問8） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問8",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-09",
@@ -1126,8 +1416,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問9） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問9",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-10",
@@ -1145,8 +1440,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問10） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問10",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-11",
@@ -1164,8 +1464,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問11） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問11",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-12",
@@ -1183,8 +1488,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問12） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問12",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-13",
@@ -1202,8 +1512,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問13） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問13",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-14",
@@ -1221,8 +1536,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問14） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問14",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-15",
@@ -1240,8 +1560,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問15） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問15",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-16",
@@ -1259,8 +1584,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問16） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問16",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-17",
@@ -1278,8 +1608,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問17） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問17",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-18",
@@ -1297,8 +1632,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問18） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問18",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-19",
@@ -1316,8 +1656,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問19） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問19",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-20",
@@ -1335,8 +1680,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問20） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問20",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-21",
@@ -1354,8 +1704,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問21） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問21",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-22",
@@ -1373,8 +1728,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問22） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問22",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-23",
@@ -1392,8 +1752,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問23） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問23",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-24",
@@ -1411,8 +1776,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問24） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問24",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-25",
@@ -1430,8 +1800,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問25） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問25",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-26",
@@ -1449,8 +1824,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問26） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問26",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-27",
@@ -1468,8 +1848,13 @@
       "correctAnswer": 3,
       "explanation": "（令和5年度 国内旅行実務 問27） 正解：エ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問27",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-28",
@@ -1487,8 +1872,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問28） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問28",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-29",
@@ -1506,8 +1896,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問29） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問29",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-30",
@@ -1525,8 +1920,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問30） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問30",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-31",
@@ -1544,8 +1944,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問31） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問31",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-32",
@@ -1563,8 +1968,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問32） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問32",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-33",
@@ -1582,8 +1992,13 @@
       "correctAnswer": 0,
       "explanation": "（令和5年度 国内旅行実務 問33） 正解：ア。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問33",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-34",
@@ -1601,8 +2016,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問34） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問34",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-35",
@@ -1620,8 +2040,13 @@
       "correctAnswer": 2,
       "explanation": "（令和5年度 国内旅行実務 問35） 正解：ウ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問35",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R05-practice-36",
@@ -1639,8 +2064,13 @@
       "correctAnswer": 1,
       "explanation": "（令和5年度 国内旅行実務 問36） 正解：イ。出典：R05mondai.pdf（問題）／R05kaitou_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和5年度 国内旅行実務 問36",
+      "sourcePdfs": [
+        "R05mondai.pdf",
+        "R05kaitou_2.pdf"
+      ],
       "examType": "official",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     }
   ]
 }

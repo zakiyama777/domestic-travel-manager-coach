@@ -163,6 +163,9 @@ def parse_new(pdf):
         out[sec] = parse_col(L) + parse_col(R)
     return out
 
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+RAW_DIR = os.path.join(REPO_ROOT, 'content', 'past-exams', '_raw')
+
 YEARS = [
     ('R03','R03kaitou_2.pdf','old'),
     ('R04','R04kaitou_2.pdf','old'),
@@ -173,7 +176,9 @@ YEARS = [
 
 all_answers = {}
 for year, fn, style in YEARS:
-    path = f'/home/user/uploaded_files/{fn}'
+    path = os.path.join(RAW_DIR, fn)
+    if not os.path.exists(path):
+        path = f'/home/user/uploaded_files/{fn}'
     entry = {}
     if style == 'old':
         lt = parse_law_terms_old(path, year)
@@ -200,6 +205,9 @@ for year in sorted(all_answers.keys()):
     for i,p in enumerate(entry['practice'][:40]):
         print(f'   [{i}] {p}')
 
-with open('/tmp/parse/answers.json','w') as f:
+OUT_DIR = os.path.join(REPO_ROOT, 'content', 'past-exams', '_raw')
+os.makedirs(OUT_DIR, exist_ok=True)
+out_path = os.path.join(OUT_DIR, 'answers.json')
+with open(out_path,'w') as f:
     json.dump(all_answers, f, ensure_ascii=False, indent=2)
-print('\nSaved /tmp/parse/answers.json')
+print(f'\nSaved {out_path}')

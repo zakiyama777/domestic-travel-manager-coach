@@ -37,9 +37,23 @@ def parse_new(pdf_txt_path):
         end = matches[i+1].start() if i+1 < len(matches) else len(raw)
         body = raw[start:end]
         # Parse prompt + 4 choices
-        # Choice markers: 'ア．' or 'ア.' or 'ア ' at start of line
-        choice_pat = re.compile(r'^\s*(ア|イ|ウ|エ|オ)[．\.]\s*(.*)$', re.MULTILINE)
+        # Choice markers: 'ア．' or 'ア.' - may appear at start of line OR inline.
+        # Use lookahead to detect a fresh choice: preceded by line-start, or by 2+ whitespace.
+        choice_pat = re.compile(r'(?:^|(?<=\s{2}))\s*(ア|イ|ウ|エ|オ)[．\.]\s*', re.MULTILINE)
         cms = list(choice_pat.finditer(body))
+        # Deduplicate: for the same letter appearing multiple times (e.g. within text),
+        # keep only the first occurrence of each letter in order ア→イ→ウ→エ.
+        seen_letters = set()
+        uniq_cms = []
+        expected = ['ア','イ','ウ','エ','オ']
+        exp_idx = 0
+        for cm in cms:
+            letter = cm.group(1)
+            if exp_idx < len(expected) and letter == expected[exp_idx] and letter not in seen_letters:
+                uniq_cms.append(cm)
+                seen_letters.add(letter)
+                exp_idx += 1
+        cms = uniq_cms
         if len(cms) >= 4:
             prompt_end = cms[0].start()
             prompt = body[:prompt_end].strip()

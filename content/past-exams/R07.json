@@ -27,8 +27,13 @@
       ],
       "explanation": "（令和7年度 法令 問1） 正解：ア・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問1",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-02",
@@ -50,8 +55,13 @@
       ],
       "explanation": "（令和7年度 法令 問2） 正解：ア・ウ・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問2",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-03",
@@ -69,8 +79,13 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 法令 問3） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問3",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-04",
@@ -88,8 +103,13 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 法令 問4） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問4",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-05",
@@ -107,8 +127,13 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 法令 問5） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問5",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-06",
@@ -126,8 +151,13 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 法令 問6） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問6",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-07",
@@ -145,8 +175,13 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 法令 問7） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問7",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-08",
@@ -164,8 +199,13 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 法令 問8） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問8",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-09",
@@ -187,8 +227,13 @@
       ],
       "explanation": "（令和7年度 法令 問9） 正解：ア・イ・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問9",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-10",
@@ -206,8 +251,13 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 法令 問10） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問10",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-11",
@@ -225,8 +275,13 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 法令 問11） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問11",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-12",
@@ -244,8 +299,13 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 法令 問12） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問12",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-13",
@@ -266,8 +326,13 @@
       ],
       "explanation": "（令和7年度 法令 問13） 正解：ア・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問13",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-14",
@@ -285,8 +350,13 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 法令 問14） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問14",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-15",
@@ -304,8 +374,13 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 法令 問15） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問15",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-16",
@@ -323,8 +398,13 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 法令 問16） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問16",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-17",
@@ -342,8 +422,13 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 法令 問17） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問17",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-18",
@@ -361,8 +446,13 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 法令 問18） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問18",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-19",
@@ -383,8 +473,13 @@
       ],
       "explanation": "（令和7年度 法令 問19） 正解：ア・ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問19",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-20",
@@ -402,8 +497,13 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 法令 問20） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問20",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-21",
@@ -421,8 +521,13 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 法令 問21） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問21",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-22",
@@ -444,8 +549,13 @@
       ],
       "explanation": "（令和7年度 法令 問22） 正解：イ・ウ・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問22",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-23",
@@ -463,8 +573,13 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 法令 問23） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問23",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-24",
@@ -482,8 +597,13 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 法令 問24） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問24",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
       "id": "pe-R07-law-25",
@@ -501,11 +621,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 法令 問25） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 旅行業法 問25",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-26",
+      "id": "pe-R07-terms-01",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -520,11 +645,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 約款 問26） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問26",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-27",
+      "id": "pe-R07-terms-02",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -539,11 +669,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 約款 問27） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問27",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-28",
+      "id": "pe-R07-terms-03",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -558,11 +693,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問28） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問28",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-29",
+      "id": "pe-R07-terms-04",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -577,11 +717,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 約款 問29） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問29",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-30",
+      "id": "pe-R07-terms-05",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -596,11 +741,16 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 約款 問30） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問30",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-31",
+      "id": "pe-R07-terms-06",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -618,11 +768,16 @@
       ],
       "explanation": "（令和7年度 約款 問31） 正解：イ・ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問31",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-32",
+      "id": "pe-R07-terms-07",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -637,11 +792,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問32） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問32",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-33",
+      "id": "pe-R07-terms-08",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -656,11 +816,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問33） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問33",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-34",
+      "id": "pe-R07-terms-09",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -679,11 +844,16 @@
       ],
       "explanation": "（令和7年度 約款 問34） 正解：ア・イ・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問34",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-35",
+      "id": "pe-R07-terms-10",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -701,11 +871,16 @@
       ],
       "explanation": "（令和7年度 約款 問35） 正解：ウ・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問35",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-36",
+      "id": "pe-R07-terms-11",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -720,11 +895,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 約款 問36） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問36",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-37",
+      "id": "pe-R07-terms-12",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -739,11 +919,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 約款 問37） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問37",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-38",
+      "id": "pe-R07-terms-13",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -758,11 +943,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 約款 問38） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問38",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-39",
+      "id": "pe-R07-terms-14",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -777,11 +967,16 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 約款 問39） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問39",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-40",
+      "id": "pe-R07-terms-15",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -796,11 +991,16 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 約款 問40） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問40",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-41",
+      "id": "pe-R07-terms-16",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -815,11 +1015,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問41） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問41",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-42",
+      "id": "pe-R07-terms-17",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -834,11 +1039,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 約款 問42） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問42",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-43",
+      "id": "pe-R07-terms-18",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -853,11 +1063,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問43） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問43",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-44",
+      "id": "pe-R07-terms-19",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -872,11 +1087,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 約款 問44） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問44",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-45",
+      "id": "pe-R07-terms-20",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -891,11 +1111,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問45） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問45",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-46",
+      "id": "pe-R07-terms-21",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -910,11 +1135,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 約款 問46） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問46",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-47",
+      "id": "pe-R07-terms-22",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -929,11 +1159,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 約款 問47） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問47",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-48",
+      "id": "pe-R07-terms-23",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -948,11 +1183,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 約款 問48） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問48",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-49",
+      "id": "pe-R07-terms-24",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -967,11 +1207,16 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 約款 問49） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問49",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-terms-50",
+      "id": "pe-R07-terms-25",
       "category": "past_exam",
       "year": "R07",
       "section": "terms",
@@ -986,11 +1231,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 約款 問50） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。",
       "sourceLabel": "令和7年度 約款 問50",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-51",
+      "id": "pe-R07-practice-01",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1005,11 +1255,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 国内旅行実務 問51） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問51",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-52",
+      "id": "pe-R07-practice-02",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1024,11 +1279,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 国内旅行実務 問52） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問52",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-53",
+      "id": "pe-R07-practice-03",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1043,11 +1303,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 国内旅行実務 問53） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問53",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-54",
+      "id": "pe-R07-practice-04",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1062,11 +1327,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 国内旅行実務 問54） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問54",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-55",
+      "id": "pe-R07-practice-05",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1081,11 +1351,16 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 国内旅行実務 問55） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問55",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-56",
+      "id": "pe-R07-practice-06",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1100,11 +1375,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 国内旅行実務 問56） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問56",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-57",
+      "id": "pe-R07-practice-07",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1119,11 +1399,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 国内旅行実務 問57） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問57",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-58",
+      "id": "pe-R07-practice-08",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1138,11 +1423,16 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 国内旅行実務 問58） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問58",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-59",
+      "id": "pe-R07-practice-09",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1157,11 +1447,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 国内旅行実務 問59） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問59",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-60",
+      "id": "pe-R07-practice-10",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1176,11 +1471,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 国内旅行実務 問60） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問60",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-61",
+      "id": "pe-R07-practice-11",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1195,11 +1495,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 国内旅行実務 問61） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問61",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-62",
+      "id": "pe-R07-practice-12",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1214,11 +1519,208 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 国内旅行実務 問62） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問62",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-71",
+      "id": "pe-R07-practice-13",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 63,
+      "question": "長い石段の参道と海の神様を祀ったことで知られ、参道沿いには土産物やさぬきうどんの店が並び、12 棟の建造物が令和６年に国指定の重要文化財に指定された神社を、１つ選びなさい。",
+      "choices": [
+        "鵜戸神宮",
+        "赤間神宮",
+        "金刀比羅宮",
+        "住吉大社"
+      ],
+      "correctAnswer": 2,
+      "explanation": "（令和7年度 国内旅行実務 問63） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問63",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-14",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 64,
+      "question": "急流とうず潮で知られる針尾瀬戸に架かる橋梁で、佐世保市と西彼杵半島をつなぐ道路橋であり、国指 定の重要文化財（建造物）に指定されている橋を、１つ選びなさい。",
+      "choices": [
+        "西海橋",
+        "九重“夢”大吊橋",
+        "瀬戸大橋",
+        "関門橋"
+      ],
+      "correctAnswer": 0,
+      "explanation": "（令和7年度 国内旅行実務 問64） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問64",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-15",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 65,
+      "question": "木曽川沿いの城で、別名“白帝城”とも呼ばれる国宝の天守を持つ城を、１つ選びなさい。",
+      "choices": [
+        "犬山城",
+        "丸岡城",
+        "松本城",
+        "清州城"
+      ],
+      "correctAnswer": 0,
+      "explanation": "（令和7年度 国内旅行実務 問65） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問65",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-16",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 66,
+      "question": "北海道西部の日本海に突出し、その北西端には断崖と奇岩で知られる神威岬と、近くにはニセコや小樽な どの観光地がある半島を、１つ選びなさい。",
+      "choices": [
+        "知床半島",
+        "根室半島",
+        "渡島半島",
+        "積丹半島"
+      ],
+      "correctAnswer": 3,
+      "explanation": "（令和7年度 国内旅行実務 問66） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問66",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-17",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 67,
+      "question": "十和田湖から発し、銚子大滝など十数か所の滝と奇岩によってつくられる流れが見事な、特に新緑や紅 葉の季節に人気の高い観光地を、１つ選びなさい。",
+      "choices": [
+        "猊鼻渓",
+        "奥入瀬渓流",
+        "九頭竜峡",
+        "龍王峡"
+      ],
+      "correctAnswer": 1,
+      "explanation": "（令和7年度 国内旅行実務 問67） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問67",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-18",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 68,
+      "question": "片品川の中流に位置し、豪快に落下・飛散する姿から「東洋のナイアガラ」とも称され、国の名勝・天 然記念物に指定されている滝を、１つ選びなさい。",
+      "choices": [
+        "吹割の滝",
+        "布引の滝",
+        "浄蓮の滝",
+        "霧降滝"
+      ],
+      "correctAnswer": 0,
+      "explanation": "（令和7年度 国内旅行実務 問68） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問68",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-19",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 69,
+      "question": "西ノ島、中ノ島、知夫里島、島後の４つの島と約 180 の小島で形成され、国賀海岸やローソク島などの 海岸美や、後醍醐天皇の行在所跡などの史跡で知られる島を、１つ選びなさい。",
+      "choices": [
+        "防予諸島",
+        "対馬",
+        "隠岐諸島",
+        "大三島"
+      ],
+      "correctAnswer": 2,
+      "explanation": "（令和7年度 国内旅行実務 問69） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問69",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-20",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 70,
+      "question": "次の文章を読み、以下の各設問について該当する答を、選択肢の中から選びなさい。 国土の３分の２を森林が占めるわが国では、山や渓谷が人気の高い観光資源のひとつとなっている。 とくに秋を彩る紅葉は、その名所と呼ばれる場所が各地にあり、多くの観光客で賑わっている。 （ Ａ ）は、岩畳周辺の木々が鮮やかに色づき水面に映りこむ紅葉を、また、その近隣に位置する 「月の石もみじ公園」「寳登山神社」 「自然の博物館」ではライトアップした紅葉を楽しむことができる。 白山信仰の寺であり、松尾芭蕉の奥の細道で有名な（ Ｂ ）は、北陸でも屈指の紅葉の名所として 知られ、境内にある奇岩遊仙境の白に紅葉の赤が映える様は有名である。 また、（ａ）保津峡ではトロッコ列車や川下りの船から紅葉狩りを楽しむことができる。 （ Ｃ ）は、札幌の奥座敷と呼ばれ、温泉街を流れる豊平川と山々に囲まれており、温泉から紅葉 を望むことができる。 ①（ Ａ ）に入る観光地として最も適当なものを、１つ選びなさい。",
+      "choices": [
+        "瀞峡",
+        "塔のへつり",
+        "長瀞",
+        "吾妻峡 ②（ Ｂ ）に入る観光地として最も適当なものを、１つ選びなさい。 ア．那谷寺 イ．明通寺 ウ．永平寺 エ．大善寺 ③下線（ａ）と同じ都道府県の名産品として最も適当なものを、１つ選びなさい。 ア．松前漬 イ．山川漬 ウ．いぶりがっこ エ．千枚漬 ④（ Ｃ ）に入る観光地として最も適当なものを、１つ選びなさい。 ア．神居古潭 イ．定山渓 ウ．天人峡 エ．五色渓谷 - 35 - 日本国内における世界遺産・ラムサール条約・国立公園に関する以下の設問について、該当する答を、選 択肢の中から選びなさい。"
+      ],
+      "correctAnswer": 3,
+      "explanation": "（令和7年度 国内旅行実務 問70） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問70",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-21",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1233,11 +1735,44 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 国内旅行実務 問71） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問71",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-73",
+      "id": "pe-R07-practice-22",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 72,
+      "question": "世界文化遺産「琉球王国のグスク及び関連遺産群」に含まれる構成資産として、正しいものをすべて選びなさい。",
+      "choices": [
+        "宮良殿内",
+        "今帰仁城跡",
+        "中城城跡",
+        "玉陵"
+      ],
+      "correctAnswer": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "（令和7年度 国内旅行実務 問72） 正解：イ・ウ・エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問72",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-23",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1252,11 +1787,208 @@
       "correctAnswer": 3,
       "explanation": "（令和7年度 国内旅行実務 問73） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問73",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-82",
+      "id": "pe-R07-practice-24",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 74,
+      "question": "十和田八幡平国立公園内にある観光地として誤っているものを、１つ選びなさい。",
+      "choices": [
+        "田沢湖",
+        "八甲田山",
+        "酸ヶ湯温泉",
+        "岩手山"
+      ],
+      "correctAnswer": 0,
+      "explanation": "（令和7年度 国内旅行実務 問74） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問74",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-25",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 75,
+      "question": "大カルデラにそびえる火山やその北に連なる火山群、その周囲に広がる雄大でなだらかな草原が特徴で、 区域内に「菊池渓谷」や「内牧温泉」などの観光地がある国立公園を、１つ選びなさい。",
+      "choices": [
+        "霧島錦江湾国立公園",
+        "大山隠岐国立公園",
+        "阿蘇くじゅう国立公園",
+        "雲仙天草国立公園 - 36 - 次の設問の行程について、前後に最も近い観光地を、選択肢の中から１つ選んで（ ）を埋め、モデ ルコースを完成させなさい。"
+      ],
+      "correctAnswer": 2,
+      "explanation": "（令和7年度 国内旅行実務 問75） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問75",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-26",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 76,
+      "question": "米原駅 一 （ ） ― 百済寺 ― 近江八幡 ― 大津駅",
+      "choices": [
+        "伊賀上野城",
+        "丸亀城",
+        "彦根城",
+        "岡崎城"
+      ],
+      "correctAnswer": 2,
+      "explanation": "（令和7年度 国内旅行実務 問76） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問76",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-27",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 77,
+      "question": "網走湖畔温泉 ― オホーツク流氷館・天都山展望台 ― （ ） ― プユニ岬 ―ウトロ温泉",
+      "choices": [
+        "日勝峠",
+        "オシンコシンの滝",
+        "銀河・流星の滝",
+        "中山峠"
+      ],
+      "correctAnswer": 1,
+      "explanation": "（令和7年度 国内旅行実務 問77） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問77",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-28",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 78,
+      "question": "静岡駅 ― （ ） ― 久能山東照宮 ― 三島スカイウォーク ― 熱海温泉",
+      "choices": [
+        "三保松原",
+        "風の松原",
+        "気比の松原",
+        "虹の松原"
+      ],
+      "correctAnswer": 0,
+      "explanation": "（令和7年度 国内旅行実務 問78） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問78",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-29",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 79,
+      "question": "那覇空港 ― （ ） ― 座喜味城跡 ― 万座毛 ― 本部半島",
+      "choices": [
+        "仙巌園",
+        "天赦園",
+        "萬福寺庭園",
+        "識名園"
+      ],
+      "correctAnswer": 3,
+      "explanation": "（令和7年度 国内旅行実務 問79） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問79",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-30",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 80,
+      "question": "長野駅 ― 善光寺 ― 飯綱高原 ― （ ） ― 妙高高原駅",
+      "choices": [
+        "諏訪大社",
+        "穂高神社",
+        "彌彦神社",
+        "戸隠神社"
+      ],
+      "correctAnswer": 3,
+      "explanation": "（令和7年度 国内旅行実務 問80） 正解：エ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問80",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-31",
+      "category": "past_exam",
+      "year": "R07",
+      "section": "practice",
+      "originalQuestionNumber": 81,
+      "question": "水戸駅 ― （ ） ― 花貫渓谷 ― 袋田の滝 ― 水戸駅",
+      "choices": [
+        "旧致道館",
+        "旧日新館",
+        "弘道館",
+        "足利学校 - 37 - 次の設問の組合せについて、該当する答を、選択肢の中から選びなさい。"
+      ],
+      "correctAnswer": 2,
+      "explanation": "（令和7年度 国内旅行実務 問81） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
+      "sourceLabel": "令和7年度 国内旅行実務 問81",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
+      "examType": "sample",
+      "isActive": true,
+      "needsReview": false
+    },
+    {
+      "id": "pe-R07-practice-32",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1271,11 +2003,16 @@
       "correctAnswer": 0,
       "explanation": "（令和7年度 国内旅行実務 問82） 正解：ア。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問82",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-83",
+      "id": "pe-R07-practice-33",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1290,11 +2027,16 @@
       "correctAnswer": 2,
       "explanation": "（令和7年度 国内旅行実務 問83） 正解：ウ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問83",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-84",
+      "id": "pe-R07-practice-34",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1309,11 +2051,16 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 国内旅行実務 問84） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問84",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     },
     {
-      "id": "pe-R07-practice-85",
+      "id": "pe-R07-practice-35",
       "category": "past_exam",
       "year": "R07",
       "section": "practice",
@@ -1328,8 +2075,13 @@
       "correctAnswer": 1,
       "explanation": "（令和7年度 国内旅行実務 問85） 正解：イ。出典：R07_mondairei.pdf（問題）／R07_kaitourei_2.pdf（正解）。 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。",
       "sourceLabel": "令和7年度 国内旅行実務 問85",
+      "sourcePdfs": [
+        "R07_mondairei.pdf",
+        "R07_kaitourei_2.pdf"
+      ],
       "examType": "sample",
-      "isActive": true
+      "isActive": true,
+      "needsReview": false
     }
   ]
 }

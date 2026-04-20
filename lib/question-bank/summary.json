@@ -22,7 +22,7 @@
     }
   },
   "errors": [],
-  "generatedAt": "2026-04-20T17:51:55.352Z",
+  "generatedAt": "2026-04-20T21:39:08.963Z",
   "sourceFiles": [
     "content/questions/sample.json",
     "content/questions/seed-binary-law.csv",
@@ -33,25 +33,25 @@
     "content/questions/seed-quad-terms.csv"
   ],
   "past": {
-    "totalInput": 388,
-    "accepted": 388,
+    "totalInput": 422,
+    "accepted": 422,
     "skipped": 0,
     "duplicates": 0,
     "byYear": {
       "R07": {
-        "total": 68,
+        "total": 85,
         "law": 25,
         "terms": 25,
-        "practice": 18,
+        "practice": 35,
         "examType": "sample",
         "label": "令和7年度",
         "westernYear": 2025
       },
       "R06": {
-        "total": 67,
+        "total": 84,
         "law": 25,
         "terms": 25,
-        "practice": 17,
+        "practice": 34,
         "examType": "sample",
         "label": "令和6年度",
         "westernYear": 2024

@@ -178,9 +178,9 @@ npm run build:questions
 | R03 | official | **86 問** | law 25 / terms 25 / practice 36 |
 | R04 | official | **81 問** | law 25 / terms 25 / practice 31 |
 | R05 | official | **86 問** | law 25 / terms 25 / practice 36 |
-| R06 | sample   | **67 問** | law 25 / terms 25 / practice 17 |
-| R07 | sample   | **68 問** | law 25 / terms 25 / practice 18 |
-| **合計** | | **388 問** | law 125 / terms 125 / practice 138 |
+| R06 | sample   | **84 問** | law 25 / terms 25 / practice 34 |
+| R07 | sample   | **85 問** | law 25 / terms 25 / practice 35 |
+| **合計** | | **422 問** | law 125 / terms 125 / practice 172 |
 
 ### 変換の特徴と制約
 
@@ -198,8 +198,29 @@ npm run build:questions
 
 - 元 PDF：`content/past-exams/_raw/*.pdf`（本試験問題・解答・実施状況）
 - 抽出中間テキスト：`content/past-exams/_raw/txt/*_poppler.txt`
-- 変換スクリプト：`scripts/pdf-import/` （`parse-answers.py` / `parse-old-mondai.py` / `parse-new-mondai.py` / `build-past-exam-jsons.py`）
+- 変換スクリプト：`scripts/pdf-import/`
+  - `parse-answers.py` ... PyMuPDF で正解キー PDF を座標ベースに解析し `_raw/answers.json` を出力
+  - `parse-old-mondai.py` ... R03–R05 の旧フォーマット mondai PDF を pdftotext 経由でパース（Gujarati 文字化け・`唖` セパレータを除去）
+  - `parse-new-mondai.py` ... R06–R07 の新フォーマット（出題例）mondai を `問N` マーカーで分割。選択肢が同一行に並ぶ「ア．〜 イ．〜 ウ．〜 エ．〜」レイアウトにも対応
+  - `build-past-exam-jsons.py` ... 正解キー × 問題本文を originalQuestionNumber で join して `content/past-exams/R0X.json` を生成
+- 実行順：`python3 scripts/pdf-import/parse-answers.py && python3 scripts/pdf-import/build-past-exam-jsons.py && npm run build:questions`
 - 詳細は `scripts/pdf-import/README.md` 参照
+
+### 抽出ワークフロー（mondai/kaitou 追加時）
+
+1. `content/past-exams/_raw/` へ `RYYmondai.pdf` と `RYYkaitou_2.pdf` を配置
+2. `pdftotext -layout` で `_raw/txt/RYYmondai_poppler.txt` を作成（Makefile / CI で自動化可）
+3. `parse-answers.py` を実行 → `_raw/answers.json` に年度エントリが追加
+4. `build-past-exam-jsons.py` を実行 → `content/past-exams/RYY.json` を生成
+5. `npm run build:questions` でバリデーション + データコード生成
+6. 文字化けや欠落が残った問題は `RYY.json` を直接編集。次回再ビルドで上書きされる可能性があるため、`_meta.manual: true` を付けて保護するか、パーサ側を改善する
+
+### `needsReview` / `isActive` の使い方
+
+- 自動抽出で信頼できない問題（選択肢が 4 未満、図表必須など）は
+  `"isActive": false, "needsReview": true` を付与してビルド結果から除外
+- 手動で確認・修正したあとに `needsReview: false` に戻し、`isActive: true` にすると出題対象になる
+- UI 側では `isActive: false` の問題は出題・Mix 対象から除外される（`build-question-bank.mjs` 側で弾く）
 
 ### 修正方法
 

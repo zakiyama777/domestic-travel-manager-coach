@@ -100,10 +100,20 @@ def parse_terms_section(section_raw):
             results.append({'qnum': qnum, 'prompt': p, 'choices': c})
     return results
 
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+RAW_DIR = os.path.join(REPO_ROOT, 'content', 'past-exams', '_raw')
+TXT_DIR = os.path.join(RAW_DIR, 'txt')
+
 def extract_year_old(year, mondai_fn):
-    path = f'/tmp/exam_txt/{os.path.basename(mondai_fn).replace(".pdf","_poppler.txt")}'
+    base = os.path.basename(mondai_fn).replace('.pdf', '_poppler.txt')
+    path = os.path.join(TXT_DIR, base)
     if not os.path.exists(path):
-        os.system(f'pdftotext -layout /home/user/uploaded_files/{mondai_fn} {path}')
+        # Try the default raw dir or uploaded_files as fallback
+        pdf_path = os.path.join(RAW_DIR, mondai_fn)
+        if not os.path.exists(pdf_path):
+            pdf_path = f'/home/user/uploaded_files/{mondai_fn}'
+        os.makedirs(TXT_DIR, exist_ok=True)
+        os.system(f'pdftotext -layout "{pdf_path}" "{path}"')
     raw = open(path).read()
     txt = fw_to_ascii(clean(raw))
     

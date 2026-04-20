@@ -1,16 +1,32 @@
 """Build the final R03-R07 JSON files with real questions + correct answers.
 
-Also normalize mojibake placeholders into readable Japanese (○).
+Pipeline:
+  1. parse-answers.py    → content/past-exams/_raw/answers.json
+  2. parse-old-mondai.py → exposes extract_year_old() for R03-R05
+  3. parse-new-mondai.py → exposes parse_new() for R06-R07
+  4. this script         → content/past-exams/R0X.json
+
+Also normalizes mojibake placeholders into readable Japanese (○).
 """
-import re, json, os, sys
-sys.path.insert(0, '/tmp/parse')
+import re, json, os, sys, importlib.util
 
-import importlib
-import parse_questions
-importlib.reload(parse_questions)
-from parse_questions import extract_year_old
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+RAW_DIR = os.path.join(REPO_ROOT, 'content', 'past-exams', '_raw')
+TXT_DIR = os.path.join(RAW_DIR, 'txt')
+OUT_DIR = os.path.join(REPO_ROOT, 'content', 'past-exams')
 
-from parse_new_mondai import parse_new
+def _load(name, fname):
+    spec = importlib.util.spec_from_file_location(name, os.path.join(SCRIPT_DIR, fname))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+parse_old = _load('parse_old_mondai', 'parse-old-mondai.py')
+parse_new_mod = _load('parse_new_mondai', 'parse-new-mondai.py')
+
+extract_year_old = parse_old.extract_year_old
+parse_new = parse_new_mod.parse_new
 
 LETTER_TO_IDX = {'ア':0,'イ':1,'ウ':2,'エ':3}
 
@@ -21,16 +37,15 @@ def letter_to_answer(letter):
         return sorted([LETTER_TO_IDX[p] for p in parts if p in LETTER_TO_IDX])
     return LETTER_TO_IDX.get(letter)
 
-with open('/tmp/parse/answers.json') as f:
+ANSWERS_PATH = os.path.join(RAW_DIR, 'answers.json')
+with open(ANSWERS_PATH) as f:
     ANSWERS = json.load(f)
 
 def sanitize_text(s):
     if not s: return s
     # Normalize whitespace
     s = re.sub(r'\s+', ' ', s).strip()
-    # Add a space before common Japanese number words if missing
-    # The original text has "法第条目的" (should be "法第○条（目的）")
-    # Common patterns:
+    # Common mojibake placeholders after glyph loss:
     s = re.sub(r'法第条', '法第○条', s)
     s = re.sub(r'第条', '第○条', s)
     s = re.sub(r'第項', '第○項', s)
@@ -52,13 +67,13 @@ def shorten(s, n=1500):
     s = sanitize_text(s)
     return s if len(s) <= n else s[:n-1] + '…'
 
-def make_question(year, section, qnum, prompt, choices_list, letter, label, src_m, src_k, is_official=True, orig_qnum=None):
-    qid = f'pe-{year}-{section}-{(orig_qnum or qnum):02d}'
+def make_question(year, section, seq_num, prompt, choices_list, letter, label, src_m, src_k, is_official=True, orig_qnum=None):
+    display_qnum = orig_qnum or seq_num
+    qid = f'pe-{year}-{section}-{seq_num:02d}'
     ans = letter_to_answer(letter)
     if ans is None: return None
     section_ja = {'law':'法令','terms':'約款','practice':'国内旅行実務'}[section]
     short_ja = {'law':'旅行業法','terms':'約款','practice':'国内旅行実務'}[section]
-    display_qnum = orig_qnum or qnum
     explanation = f'（{label} {section_ja} 問{display_qnum}） 正解：{letter}。出典：{src_m}（問題）／{src_k}（正解）。'
     if section == 'practice':
         explanation += ' 計算・資料読み取り問題は、必ず公式PDF（問題冊子）の図表・資料も確認してください。'
@@ -73,8 +88,10 @@ def make_question(year, section, qnum, prompt, choices_list, letter, label, src_
         'correctAnswer': ans,
         'explanation': explanation,
         'sourceLabel': f'{label} {short_ja} 問{display_qnum}',
+        'sourcePdfs': [src_m, src_k],
         'examType': 'official' if is_official else 'sample',
         'isActive': True,
+        'needsReview': False,
     }
 
 def build_old(year, mondai, label, src_m, src_k, wy):
@@ -160,11 +177,12 @@ CONFIGS = [
     ('R03', 'old', 'R03mondai.pdf', '令和3年度', 'R03mondai.pdf', 'R03kaitou_2.pdf', 2021),
     ('R04', 'old', 'R04mondai.pdf', '令和4年度', 'R04mondai.pdf', 'R04kaitou_2.pdf', 2022),
     ('R05', 'old', 'R05mondai.pdf', '令和5年度', 'R05mondai.pdf', 'R05kaitou_2.pdf', 2023),
-    ('R06', 'new', '/tmp/exam_txt/R06___mondairei_poppler.txt', '令和6年度', 'R06___mondairei.pdf', 'R06__kaitourei_2.pdf', 2024),
-    ('R07', 'new', '/tmp/exam_txt/R07_mondairei_poppler.txt', '令和7年度', 'R07_mondairei.pdf', 'R07_kaitourei_2.pdf', 2025),
+    ('R06', 'new', os.path.join(TXT_DIR, 'R06___mondairei_poppler.txt'), '令和6年度', 'R06___mondairei.pdf', 'R06__kaitourei_2.pdf', 2024),
+    ('R07', 'new', os.path.join(TXT_DIR, 'R07_mondairei_poppler.txt'), '令和7年度', 'R07_mondairei.pdf', 'R07_kaitourei_2.pdf', 2025),
 ]
 
-os.makedirs('/tmp/parse/out', exist_ok=True)
+os.makedirs(OUT_DIR, exist_ok=True)
+grand_total = 0
 for cfg in CONFIGS:
     year, style = cfg[0], cfg[1]
     if style == 'old':
@@ -173,10 +191,14 @@ for cfg in CONFIGS:
     else:
         _, _, txt_path, label, src_m, src_k, wy = cfg
         data = build_new(year, txt_path, label, src_m, src_k, wy)
-    outpath = f'/tmp/parse/out/{year}.json'
+    outpath = os.path.join(OUT_DIR, f'{year}.json')
     with open(outpath, 'w') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     by_sec = {'law':0, 'terms':0, 'practice':0}
     for q in data['questions']:
         by_sec[q['section']] = by_sec.get(q['section'],0) + 1
-    print(f'{year}: {len(data["questions"])} total — law={by_sec["law"]}, terms={by_sec["terms"]}, practice={by_sec["practice"]} → {outpath}')
+    total = len(data['questions'])
+    grand_total += total
+    print(f'{year}: {total} total — law={by_sec["law"]}, terms={by_sec["terms"]}, practice={by_sec["practice"]} → {outpath}')
+
+print(f'\nGrand total: {grand_total} past-exam questions')
