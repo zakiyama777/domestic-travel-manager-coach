@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ChevronRight, Settings2 } from 'lucide-react';
+import { ChevronRight, Settings2, ScrollText } from 'lucide-react';
 import { HeroProgress } from '@/components/dashboard/hero-progress';
 import { TodayActionCard } from '@/components/dashboard/today-action-card';
 import { WeeklyChart } from '@/components/dashboard/weekly-chart';
@@ -109,6 +109,30 @@ export default function DashboardPage() {
             </p>
             <p className="mt-0.5 text-xs text-muted-foreground">
               正答率 60% 未満のトピックから優先して出題します。
+            </p>
+          </div>
+          <ChevronRight className="h-5 w-5 text-muted-foreground transition-transform group-active:translate-x-0.5" />
+        </div>
+      </Link>
+
+      {/* 7. 過去問導線 */}
+      <Link
+        href="/past"
+        className="group relative block overflow-hidden rounded-[24px] border border-border/60 bg-card p-5 shadow-soft tap-highlight"
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <ScrollText className="h-6 w-6" strokeWidth={2.2} />
+          </div>
+          <div className="flex-1">
+            <p className="font-display text-[10.5px] font-bold tracking-[0.22em] text-primary">
+              PAST EXAM
+            </p>
+            <p className="mt-0.5 font-display text-[16px] font-semibold tracking-tight">
+              過去問で、本試験の感覚に慣れる
+            </p>
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              年度別・科目別に挑戦。令和3年度から順次追加中。
             </p>
           </div>
           <ChevronRight className="h-5 w-5 text-muted-foreground transition-transform group-active:translate-x-0.5" />

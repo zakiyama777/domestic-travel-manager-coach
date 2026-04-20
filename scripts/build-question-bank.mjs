@@ -23,8 +23,10 @@ import { fileURLToPath } from 'node:url';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const CONTENT_DIR = resolve(ROOT, 'content/questions');
+const PAST_DIR = resolve(ROOT, 'content/past-exams');
 const OUT_DIR = resolve(ROOT, 'lib/question-bank');
 const OUT_TS = resolve(OUT_DIR, 'data.ts');
+const OUT_PAST_TS = resolve(OUT_DIR, 'past.ts');
 const OUT_SUMMARY = resolve(OUT_DIR, 'summary.json');
 
 const SUBJECTS = new Set(['law', 'terms', 'practice']);
@@ -213,6 +215,116 @@ function normalizeRecord(raw, fileLabel) {
   return { ok: true, id, type: 'quad', record };
 }
 
+// ---------- past-exam normalizer ----------
+function normalizePastExamRecord(raw, fileLabel) {
+  const errs = [];
+  const id = String(raw.id ?? '').trim();
+  const year = String(raw.year ?? '').trim();
+  const section = String(raw.section ?? raw.subject ?? '').trim();
+  const originalQuestionNumber = Number(raw.originalQuestionNumber ?? raw.questionNumber ?? raw.qNo);
+  const question = String(raw.question ?? raw.prompt ?? '').trim();
+  const explanation = String(raw.explanation ?? '').trim();
+  const sourceLabel = String(raw.sourceLabel ?? '').trim();
+  const subSection = raw.subSection ? String(raw.subSection).trim() : undefined;
+  const topic = raw.topic ? String(raw.topic).trim() : undefined;
+  const difficultyRaw = raw.difficulty;
+  const difficulty = (() => {
+    const n = Number(difficultyRaw);
+    return n === 1 || n === 2 || n === 3 ? n : undefined;
+  })();
+  const tags = (() => {
+    if (!raw.tags) return undefined;
+    if (Array.isArray(raw.tags)) return raw.tags.map((t) => String(t).trim()).filter(Boolean);
+    return String(raw.tags).split('|').map((t) => t.trim()).filter(Boolean);
+  })();
+  const sourcePage = raw.sourcePage !== undefined && raw.sourcePage !== ''
+    ? Number(raw.sourcePage) : undefined;
+  const isActive = (() => {
+    if (raw.isActive === undefined || raw.isActive === '' || raw.isActive === null) return true;
+    const s = String(raw.isActive).trim().toLowerCase();
+    return !(['false', '0', 'no', 'n', 'off'].includes(s));
+  })();
+
+  // choices: array or choice1..N or choiceA..D
+  let choices = [];
+  if (Array.isArray(raw.choices)) {
+    choices = raw.choices.map((c) => String(c ?? '').trim()).filter((c) => c !== '');
+  } else {
+    const candidates = [];
+    for (let i = 1; i <= 6; i++) {
+      const v = raw[`choice${i}`] ?? raw[`choice_${i}`];
+      if (v !== undefined && String(v).trim() !== '') candidates.push(String(v).trim());
+    }
+    for (const letter of ['A', 'B', 'C', 'D', 'E', 'F']) {
+      const v = raw[`choice${letter}`];
+      if (v !== undefined && String(v).trim() !== '') candidates.push(String(v).trim());
+    }
+    choices = candidates;
+  }
+
+  if (!id) errs.push('id is required');
+  if (!year) errs.push('year is required (e.g. "R03")');
+  if (!SUBJECTS.has(section)) errs.push(`section must be law|terms|practice (got "${section}")`);
+  if (!Number.isFinite(originalQuestionNumber) || originalQuestionNumber <= 0) {
+    errs.push('originalQuestionNumber must be a positive integer');
+  }
+  if (!question) errs.push('question is required');
+  if (!explanation) errs.push('explanation is required');
+  if (!sourceLabel) errs.push('sourceLabel is required');
+  if (choices.length < 2) errs.push('at least 2 choices are required');
+
+  // correctAnswer: number | number[] | strings for quad-mapping
+  let correctAnswer;
+  if (Array.isArray(raw.correctAnswer)) {
+    correctAnswer = raw.correctAnswer
+      .map((v) => {
+        if (typeof v === 'number') return v >= 1 ? v - 1 : v;
+        const idx = normalizeQuadIndex(v);
+        return idx === null ? NaN : idx;
+      })
+      .filter((v) => Number.isFinite(v));
+    if (correctAnswer.length === 0) errs.push('correctAnswer array produced no valid indices');
+  } else if (typeof raw.correctAnswer === 'number') {
+    // 1-origin -> 0-origin if user wrote 1..N style
+    correctAnswer = raw.correctAnswer >= 1 && raw.correctAnswer <= choices.length
+      ? raw.correctAnswer - 1
+      : raw.correctAnswer;
+  } else {
+    const idx = normalizeQuadIndex(raw.correctAnswer);
+    if (idx === null) errs.push(`correctAnswer invalid: "${raw.correctAnswer}"`);
+    else correctAnswer = idx;
+  }
+
+  // range check (skip for array form already cleaned above)
+  if (typeof correctAnswer === 'number' && (correctAnswer < 0 || correctAnswer >= choices.length)) {
+    errs.push(`correctAnswer out of range (got ${correctAnswer} for ${choices.length} choices)`);
+  }
+
+  if (errs.length) {
+    return { ok: false, id: id || '(no-id)', errors: errs.map((e) => `[${fileLabel}] ${e}`) };
+  }
+
+  const record = {
+    id,
+    category: 'past_exam',
+    year,
+    section,
+    originalQuestionNumber,
+    question,
+    choices,
+    correctAnswer,
+    explanation,
+    sourceLabel,
+    ...(subSection ? { subSection } : {}),
+    ...(topic ? { topic } : {}),
+    ...(difficulty ? { difficulty } : {}),
+    ...(tags && tags.length ? { tags } : {}),
+    ...(sourcePage !== undefined ? { sourcePage } : {}),
+    ...(isActive === false ? { isActive: false } : {}),
+  };
+  return { ok: true, id, record };
+}
+
 // ---------- main ----------
 function main() {
   console.log('[build-question-bank] scanning:', CONTENT_DIR);
@@ -324,18 +436,135 @@ function main() {
     console.log(`[build-question-bank] wrote empty stub to ${OUT_TS}`);
   }
 
+  // ---------- past-exam pass ----------
+  console.log('[build-question-bank] scanning past-exam:', PAST_DIR);
+  const pastFiles = walk(PAST_DIR).filter((p) => ['.csv', '.json'].includes(extname(p).toLowerCase()));
+  /** @type {Record<string, true>} */
+  const pastSeen = {};
+  const past = [];
+  const pastErrors = [];
+  let pastTotalInput = 0;
+  let pastDuplicates = 0;
+
+  for (const f of pastFiles) {
+    const rel = f.replace(ROOT + '/', '');
+    let rows = [];
+    try {
+      const text = readFileSync(f, 'utf8');
+      if (extname(f).toLowerCase() === '.csv') rows = csvToObjects(text);
+      else {
+        const data = JSON.parse(text);
+        rows = Array.isArray(data) ? data : Array.isArray(data.questions) ? data.questions : [];
+      }
+    } catch (e) {
+      pastErrors.push({ id: '(parse)', reason: `[${rel}] ${String(e?.message ?? e)}` });
+      continue;
+    }
+    for (const raw of rows) {
+      pastTotalInput++;
+      const res = normalizePastExamRecord(raw, rel);
+      if (!res.ok) {
+        pastErrors.push(...res.errors.map((r) => ({ id: res.id, reason: r })));
+        continue;
+      }
+      if (pastSeen[res.id]) {
+        pastDuplicates++;
+        pastErrors.push({ id: res.id, reason: `[${rel}] duplicate id` });
+        continue;
+      }
+      pastSeen[res.id] = true;
+      past.push(res.record);
+    }
+  }
+
+  // stable sort: year desc -> section -> q-no
+  const SECTION_ORDER = { law: 1, terms: 2, practice: 3 };
+  past.sort((a, b) => {
+    if (a.year !== b.year) return a.year < b.year ? 1 : -1;
+    const sa = SECTION_ORDER[a.section] ?? 9;
+    const sb = SECTION_ORDER[b.section] ?? 9;
+    if (sa !== sb) return sa - sb;
+    return a.originalQuestionNumber - b.originalQuestionNumber;
+  });
+
+  // build per-year/per-section aggregates
+  const byYear = {};
+  for (const q of past) {
+    if (!byYear[q.year]) byYear[q.year] = { total: 0, law: 0, terms: 0, practice: 0 };
+    byYear[q.year].total++;
+    byYear[q.year][q.section]++;
+  }
+
+  // write past.ts
+  if (past.length > 0) {
+    const header = [
+      '/* eslint-disable */',
+      '// AUTO-GENERATED by scripts/build-question-bank.mjs. DO NOT EDIT BY HAND.',
+      `// generatedAt: ${summary.generatedAt}`,
+      "import type { PastExamQuestion } from '@/lib/types/past-exam';",
+      '',
+    ].join('\n');
+    const body =
+      `export const BANK_PAST: PastExamQuestion[] = ${JSON.stringify(past, null, 2)};\n\n` +
+      `export const BANK_PAST_META = ${JSON.stringify({
+        generatedAt: summary.generatedAt,
+        total: past.length,
+        byYear,
+        sourceFiles: pastFiles.map((f) => f.replace(ROOT + '/', '')),
+      }, null, 2)} as const;\n`;
+    writeFileSync(OUT_PAST_TS, header + body, 'utf8');
+    console.log(`[build-question-bank] wrote ${OUT_PAST_TS}`);
+  } else {
+    writeFileSync(
+      OUT_PAST_TS,
+      [
+        '/* eslint-disable */',
+        '// AUTO-GENERATED stub (no past-exam input found).',
+        "import type { PastExamQuestion } from '@/lib/types/past-exam';",
+        'export const BANK_PAST: PastExamQuestion[] = [];',
+        "export const BANK_PAST_META = { generatedAt: '', total: 0, byYear: {}, sourceFiles: [] } as const;",
+        '',
+      ].join('\n'),
+      'utf8',
+    );
+    console.log(`[build-question-bank] wrote empty past-exam stub to ${OUT_PAST_TS}`);
+  }
+
+  // merge into summary
+  summary.past = {
+    totalInput: pastTotalInput,
+    accepted: past.length,
+    skipped: pastErrors.length - pastDuplicates,
+    duplicates: pastDuplicates,
+    byYear,
+    errors: pastErrors,
+    sourceFiles: pastFiles.map((f) => f.replace(ROOT + '/', '')),
+  };
+
   writeFileSync(OUT_SUMMARY, JSON.stringify(summary, null, 2), 'utf8');
 
   console.log('[build-question-bank] ✅ done');
-  console.log(`  input files : ${files.length}`);
-  console.log(`  total rows  : ${totalInput}`);
-  console.log(`  accepted    : ${summary.accepted} (binary ${summary.byType.binary} / quad ${summary.byType.quad})`);
-  console.log(`  duplicates  : ${duplicates}`);
-  console.log(`  errors      : ${errors.length - duplicates}`);
-  if (errors.length) {
+  console.log(`  [study]  input files : ${files.length}`);
+  console.log(`  [study]  total rows  : ${totalInput}`);
+  console.log(`  [study]  accepted    : ${summary.accepted} (binary ${summary.byType.binary} / quad ${summary.byType.quad})`);
+  console.log(`  [study]  duplicates  : ${duplicates}`);
+  console.log(`  [study]  errors      : ${errors.length - duplicates}`);
+  console.log(`  [past]   input files : ${pastFiles.length}`);
+  console.log(`  [past]   total rows  : ${pastTotalInput}`);
+  console.log(`  [past]   accepted    : ${past.length}`);
+  console.log(`  [past]   duplicates  : ${pastDuplicates}`);
+  console.log(`  [past]   errors      : ${pastErrors.length - pastDuplicates}`);
+  if (Object.keys(byYear).length) {
+    console.log('  [past]   by year     :');
+    for (const [y, c] of Object.entries(byYear)) {
+      console.log(`             ${y}: total ${c.total} (law ${c.law} / terms ${c.terms} / practice ${c.practice})`);
+    }
+  }
+  const allErrors = [...errors, ...pastErrors];
+  if (allErrors.length) {
     console.log('  --- issues (first 20) ---');
-    for (const e of errors.slice(0, 20)) console.log(`   - ${e.id}: ${e.reason}`);
-    if (errors.length > 20) console.log(`   ... and ${errors.length - 20} more (see summary.json)`);
+    for (const e of allErrors.slice(0, 20)) console.log(`   - ${e.id}: ${e.reason}`);
+    if (allErrors.length > 20) console.log(`   ... and ${allErrors.length - 20} more (see summary.json)`);
   }
 }
 

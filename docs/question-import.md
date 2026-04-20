@@ -219,3 +219,83 @@ build script は**エラーがあってもプロセスを落としません**（
 - [ ] `tags` や `sourceYear` でのフィルタをUIに露出
 - [ ] PDF/Word からの半自動取り込み（現段階では CSV 経由を推奨）
 - [ ] admin UI からの直接投入（Firestore に寄せた段階で）
+
+---
+
+## 11. 過去問（過去問カテゴリ）の投入
+
+過去問は `content/past-exams/` に年度単位の JSON を置きます。
+スキーマ／ビルド／配信は ○×・4 択とは**別バンク**で独立しており、
+既存の binary / quad の配信に影響しません。
+
+### ディレクトリ
+
+```
+content/past-exams/
+  R03.json      ← 令和3年度
+  R04.json      ← 令和4年度（任意）
+  ...
+```
+
+### JSON スキーマ（最小）
+
+```json
+{
+  "_meta": {
+    "year": "R03",
+    "label": "令和3年度 (2021) 国内旅行業務取扱管理者試験",
+    "westernYear": 2021,
+    "source": "令和3年度 国内旅行業務取扱管理者試験 問題・解答（R03mondai.pdf / R03kaitou_2.pdf）を基に作成。"
+  },
+  "questions": [
+    {
+      "id": "pe-R03-law-01",
+      "category": "past_exam",
+      "year": "R03",
+      "section": "law",
+      "originalQuestionNumber": 1,
+      "question": "…問題文…",
+      "choices": ["…", "…", "…", "…"],
+      "correctAnswer": 2,
+      "explanation": "…解説…",
+      "sourceLabel": "令和3年度 国内旅行業務取扱管理者試験 旅行業法 問1"
+    }
+  ]
+}
+```
+
+### 必須フィールド
+
+- `id` / `category: 'past_exam'` / `year` / `section` (law|terms|practice)
+- `originalQuestionNumber` / `question` / `choices[]`
+- `correctAnswer`（0-origin のインデックス。複数解は `[0,2]` のように配列）
+- `explanation` / `sourceLabel`
+
+### 任意フィールド
+
+- `isActive`（false にするとその問題は出題停止）
+- `subSection` / `topic` / `difficulty` / `tags` / `sourcePage`
+- `createdAt` / `updatedAt`
+
+### ビルド
+
+```
+npm run build:questions
+```
+
+出力:
+
+- `lib/question-bank/past.ts`（`BANK_PAST`）
+- `lib/question-bank/past-summary.json`
+
+### UI
+
+- `/past` — 年度一覧
+- `/past/[year]` — 科目（law / terms / practice / all）選択
+- `/past/[year]/[section]` — 原問順の問題演習（回答・解説・進捗記録）
+
+### 進捗記録
+
+過去問の正答／誤答は既存の `progressRepository.recordAnswer`
+を使って科目（section）・トピック（`topic` または `{year} 問N`）で蓄積し、
+そのまま Firestore ミラーへも反映されます（ローカルファースト）。

@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Target, Layers, Sparkles } from 'lucide-react';
+import { Home, Target, Layers, Sparkles, ScrollText } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 
 const ITEMS = [
   { href: '/dashboard', label: 'ホーム', icon: Home },
   { href: '/learn/binary', label: '○×', icon: Target },
   { href: '/learn/quad', label: '4択', icon: Layers },
+  { href: '/past', label: '過去問', icon: ScrollText },
   { href: '/review', label: '復習', icon: Sparkles },
 ] as const;
 

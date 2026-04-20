@@ -16,8 +16,9 @@
  */
 
 import type { BinaryQuestion, QuadQuestion } from '@/lib/types/question';
+import type { PastExamQuestion, ExamYearKey, PastExamYearMeta } from '@/lib/types/past-exam';
 import type { SubjectId } from '@/lib/constants/subjects';
-import { getBankBinary, getBankQuad, getBankMeta } from '@/lib/question-bank';
+import { getBankBinary, getBankQuad, getBankPast, getBankMeta } from '@/lib/question-bank';
 
 export interface PickParams {
   limit?: number;
@@ -113,10 +114,101 @@ export function bankStats(): {
   };
 }
 
+/* ---------- past-exam API ---------- */
+
+export interface PastExamPickParams {
+  year?: ExamYearKey;
+  section?: SubjectId;
+  limit?: number;
+  excludeIds?: string[];
+  /** true でシャッフル。既定は false（原問順を維持） */
+  shuffle?: boolean;
+  /** false なら isActive=false も含める。既定 true */
+  activeOnly?: boolean;
+}
+
+function isPastActive(q: PastExamQuestion): boolean {
+  return q.isActive !== false;
+}
+
+export function pickPastExam(params: PastExamPickParams = {}): PastExamQuestion[] {
+  const pool = getBankPast().slice();
+  const active = params.activeOnly === false ? pool : pool.filter(isPastActive);
+  let out = active;
+  if (params.year) out = out.filter((q) => q.year === params.year);
+  if (params.section) out = out.filter((q) => q.section === params.section);
+  if (params.excludeIds && params.excludeIds.length) {
+    const ex = new Set(params.excludeIds);
+    out = out.filter((q) => !ex.has(q.id));
+  }
+  if (params.shuffle) {
+    // Fisher-Yates
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+  } else {
+    // 原問順: section (law->terms->practice) -> originalQuestionNumber
+    const order: Record<SubjectId, number> = { law: 1, terms: 2, practice: 3 };
+    out.sort((a, b) => {
+      const sa = order[a.section] ?? 9;
+      const sb = order[b.section] ?? 9;
+      if (sa !== sb) return sa - sb;
+      return a.originalQuestionNumber - b.originalQuestionNumber;
+    });
+  }
+  if (params.limit !== undefined) out = out.slice(0, params.limit);
+  return out;
+}
+
+export function getPastExamYears(): PastExamYearMeta[] {
+  const pool = getBankPast().filter(isPastActive);
+  /** @type {Record<string, PastExamYearMeta>} */
+  const map: Record<string, PastExamYearMeta> = {};
+  for (const q of pool) {
+    if (!map[q.year]) {
+      map[q.year] = {
+        year: q.year,
+        label: yearLabel(q.year),
+        westernYear: yearToWestern(q.year),
+        counts: { law: 0, terms: 0, practice: 0 },
+        total: 0,
+      };
+    }
+    map[q.year].counts[q.section]++;
+    map[q.year].total++;
+  }
+  // 新しい年度 (R05, R04, R03, ...) を先頭に
+  return Object.values(map).sort((a, b) => b.year.localeCompare(a.year));
+}
+
+function yearLabel(year: ExamYearKey): string {
+  const w = yearToWestern(year);
+  const m = year.match(/^R(\d+)$/);
+  if (m) return `令和${parseInt(m[1], 10)}年度${w ? ` (${w})` : ''}`;
+  const h = year.match(/^H(\d+)$/);
+  if (h) return `平成${parseInt(h[1], 10)}年度${w ? ` (${w})` : ''}`;
+  return year;
+}
+function yearToWestern(year: ExamYearKey): number | undefined {
+  const r = year.match(/^R(\d+)$/);
+  if (r) return 2018 + parseInt(r[1], 10);
+  const h = year.match(/^H(\d+)$/);
+  if (h) return 1988 + parseInt(h[1], 10);
+  return undefined;
+}
+
+export function getPastExamById(id: string): PastExamQuestion | undefined {
+  return getBankPast().find((q) => q.id === id);
+}
+
 export const questionBankRepository = {
   pickBinary,
   pickQuad,
   bankStats,
+  pickPastExam,
+  getPastExamYears,
+  getPastExamById,
 };
 
 export type QuestionBankRepository = typeof questionBankRepository;
