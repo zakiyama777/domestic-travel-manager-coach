@@ -169,26 +169,41 @@ npm run build:questions
 
 ---
 
-## 7. R03 の整備状況メモ
+## 7. R03〜R07 の整備状況メモ（公式PDFから半自動抽出）
 
-- `content/past-exams/R03.json` に 30 問投入（law 10 / terms 10 / practice 10）
-- PDF 原典（R03mondai.pdf / R03kaitou_2.pdf）にサンドボックスから直接アクセスできなかった期間に、
-  代表的な出題傾向に基づいて作成した**先行投入版**を使用
-- PDF 実体が参照可能になった段階で、`R03.json` を直接編集 → `npm run build:questions` で即反映
-- UI・Firebase 同期・進捗記録は既に本番品質で動作
+2026-04 時点での正規データ（公式 PDF → JSON 半自動変換）：
 
-## 8. R04〜R07 の整備状況メモ
-
-| 年度 | examType | 投入件数 | 状態 |
+| 年度 | examType | 投入件数 | 内訳 |
 |---|---|---|---|
-| R04 | official | 9 問 (law 3 / terms 3 / practice 3) | 先行シード |
-| R05 | official | 9 問 (law 3 / terms 3 / practice 3) | 先行シード |
-| R06 | sample   | 6 問 (law 2 / terms 2 / practice 2) | 先行シード |
-| R07 | sample   | 6 問 (law 2 / terms 2 / practice 2) | 先行シード |
+| R03 | official | **86 問** | law 25 / terms 25 / practice 36 |
+| R04 | official | **81 問** | law 25 / terms 25 / practice 31 |
+| R05 | official | **86 問** | law 25 / terms 25 / practice 36 |
+| R06 | sample   | **67 問** | law 25 / terms 25 / practice 17 |
+| R07 | sample   | **68 問** | law 25 / terms 25 / practice 18 |
+| **合計** | | **388 問** | law 125 / terms 125 / practice 138 |
 
-- いずれも PDF 原典の代替として先行投入した最小セット。
-- **本ファイル (`content/past-exams/RYY.json`) を編集し `npm run build:questions`** を打つだけで全問版に差し替え可能。
-- 追加すべき問題数は各年度フル 60 問（law 30 / terms 20 / practice 20 などの実試験構成）。
+### 変換の特徴と制約
+
+- **Section 1 (法令)・Section 2 (約款) は全 25 問ずつ、本文＋4 択＋正解を抽出**
+- **Section 3 (国内旅行実務)** は問題本文と選択肢、正解を抽出。ただし：
+  - 時刻表・運賃表・料金表・地図など**図表問題の資料は JSON に含めていない**
+  - 各 `explanation` に「公式 PDF の図表も参照してください」と明記
+  - 計算問題は数値のみで成立するものは通常プレイ可
+- **複数正解**（「ア・エ」「ア・イ・ウ・エ」等）は `correctAnswer: [0, 3]` のように配列で保存
+  - UI は既に配列形式をサポート（`lib/question-bank/data.ts` / `app/(app)/past/...`）
+- **小さな丸数字** (第 1 条の `1` など) は PDF フォント埋め込みの都合で文字化けが発生するため、
+  `第○条` `第○項` のように `○` で置換。本文の意味は保持されている
+
+### 原典と抽出パイプライン
+
+- 元 PDF：`content/past-exams/_raw/*.pdf`（本試験問題・解答・実施状況）
+- 抽出中間テキスト：`content/past-exams/_raw/txt/*_poppler.txt`
+- 変換スクリプト：`scripts/pdf-import/` （`parse-answers.py` / `parse-old-mondai.py` / `parse-new-mondai.py` / `build-past-exam-jsons.py`）
+- 詳細は `scripts/pdf-import/README.md` 参照
+
+### 修正方法
+
+問題文や選択肢の文字化けを見つけたら、直接 `content/past-exams/RYY.json` を編集して `npm run build:questions` を打てば即反映。スキーマ通りであれば自動で JSON と UI が連動します。
 
 ---
 

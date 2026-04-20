@@ -22,7 +22,7 @@
     }
   },
   "errors": [],
-  "generatedAt": "2026-04-20T17:15:09.919Z",
+  "generatedAt": "2026-04-20T17:51:55.352Z",
   "sourceFiles": [
     "content/questions/sample.json",
     "content/questions/seed-binary-law.csv",
@@ -33,54 +33,54 @@
     "content/questions/seed-quad-terms.csv"
   ],
   "past": {
-    "totalInput": 60,
-    "accepted": 60,
+    "totalInput": 388,
+    "accepted": 388,
     "skipped": 0,
     "duplicates": 0,
     "byYear": {
       "R07": {
-        "total": 6,
-        "law": 2,
-        "terms": 2,
-        "practice": 2,
+        "total": 68,
+        "law": 25,
+        "terms": 25,
+        "practice": 18,
         "examType": "sample",
-        "label": "令和7年度 (2025) 国内旅行業務取扱管理者試験 出題例",
+        "label": "令和7年度",
         "westernYear": 2025
       },
       "R06": {
-        "total": 6,
-        "law": 2,
-        "terms": 2,
-        "practice": 2,
+        "total": 67,
+        "law": 25,
+        "terms": 25,
+        "practice": 17,
         "examType": "sample",
-        "label": "令和6年度 (2024) 国内旅行業務取扱管理者試験 出題例",
+        "label": "令和6年度",
         "westernYear": 2024
       },
       "R05": {
-        "total": 9,
-        "law": 3,
-        "terms": 3,
-        "practice": 3,
+        "total": 86,
+        "law": 25,
+        "terms": 25,
+        "practice": 36,
         "examType": "official",
-        "label": "令和5年度 (2023) 国内旅行業務取扱管理者試験",
+        "label": "令和5年度",
         "westernYear": 2023
       },
       "R04": {
-        "total": 9,
-        "law": 3,
-        "terms": 3,
-        "practice": 3,
+        "total": 81,
+        "law": 25,
+        "terms": 25,
+        "practice": 31,
         "examType": "official",
-        "label": "令和4年度 (2022) 国内旅行業務取扱管理者試験",
+        "label": "令和4年度",
         "westernYear": 2022
       },
       "R03": {
-        "total": 30,
-        "law": 10,
-        "terms": 10,
-        "practice": 10,
+        "total": 86,
+        "law": 25,
+        "terms": 25,
+        "practice": 36,
         "examType": "official",
-        "label": "令和3年度 (2021) 国内旅行業務取扱管理者試験",
+        "label": "令和3年度",
         "westernYear": 2021
       }
     },
