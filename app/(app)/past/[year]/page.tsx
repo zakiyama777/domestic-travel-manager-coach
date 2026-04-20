@@ -5,7 +5,7 @@ import { useRouter, useParams } from 'next/navigation';
 import { useMemo } from 'react';
 import { ChevronLeft, ChevronRight, Layers } from 'lucide-react';
 import { questionBankRepository } from '@/lib/repositories/question-bank.repository';
-import { PAST_EXAM_SECTION_LABELS } from '@/lib/types/past-exam';
+import { PAST_EXAM_SECTION_LABELS, EXAM_TYPE_LABELS } from '@/lib/types/past-exam';
 import type { SubjectId } from '@/lib/constants/subjects';
 
 export default function PastExamSectionIndexPage() {
@@ -34,11 +34,25 @@ export default function PastExamSectionIndexPage() {
         >
           <ChevronLeft className="h-4.5 w-4.5" strokeWidth={2.2} />
         </button>
-        <div>
-          <p className="font-display text-[10.5px] font-bold tracking-[0.22em] text-muted-foreground">
-            PAST EXAM
-          </p>
-          <h1 className="font-display text-[22px] font-semibold tracking-tight">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2">
+            <p className="font-display text-[10.5px] font-bold tracking-[0.22em] text-muted-foreground">
+              PAST EXAM
+            </p>
+            {yearMeta?.examType && (
+              <span
+                className={
+                  'inline-flex items-center rounded-full px-2 py-0.5 font-display text-[9.5px] font-bold tracking-[0.14em] ' +
+                  (yearMeta.examType === 'sample'
+                    ? 'bg-warning/15 text-warning'
+                    : 'bg-primary/10 text-primary')
+                }
+              >
+                {EXAM_TYPE_LABELS[yearMeta.examType]}
+              </span>
+            )}
+          </div>
+          <h1 className="font-display text-[20px] font-semibold tracking-tight">
             {yearMeta?.label ?? year}
           </h1>
         </div>

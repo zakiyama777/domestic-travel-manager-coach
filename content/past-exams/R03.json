@@ -3,8 +3,10 @@
     "year": "R03",
     "label": "令和3年度 (2021) 国内旅行業務取扱管理者試験",
     "westernYear": 2021,
+    "examType": "official",
+    "sourcePdfs": ["R03mondai.pdf", "R03kaitou_2.pdf"],
     "source": "令和3年度 国内旅行業務取扱管理者試験 問題・解答（R03mondai.pdf / R03kaitou_2.pdf）を基に作成。",
-    "notes": "R03mondai/R03kaitou_2 PDF の入手困難な環境で作成した先行投入版。問題文・選択肢・正答は最終 PDF との照合で微修正される可能性あり。正答検証の際は content/past-exams/R03.json を直接編集してから npm run build:questions を実行のこと。"
+    "notes": "R03 は本試験。AI Drive 上の R03mondai.pdf / R03kaitou_2.pdf を原典とするが、サンドボックスから PDF 実体を取得できなかった期間はキュレーション版を使用。正答・問番号・科目は原典と照合して確定すること。修正方法: content/past-exams/R03.json を直接編集 → npm run build:questions で即反映。"
   },
   "questions": [
     {

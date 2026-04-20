@@ -22,7 +22,7 @@
     }
   },
   "errors": [],
-  "generatedAt": "2026-04-20T04:12:50.664Z",
+  "generatedAt": "2026-04-20T17:15:09.919Z",
   "sourceFiles": [
     "content/questions/sample.json",
     "content/questions/seed-binary-law.csv",
@@ -33,21 +33,64 @@
     "content/questions/seed-quad-terms.csv"
   ],
   "past": {
-    "totalInput": 30,
-    "accepted": 30,
+    "totalInput": 60,
+    "accepted": 60,
     "skipped": 0,
     "duplicates": 0,
     "byYear": {
+      "R07": {
+        "total": 6,
+        "law": 2,
+        "terms": 2,
+        "practice": 2,
+        "examType": "sample",
+        "label": "令和7年度 (2025) 国内旅行業務取扱管理者試験 出題例",
+        "westernYear": 2025
+      },
+      "R06": {
+        "total": 6,
+        "law": 2,
+        "terms": 2,
+        "practice": 2,
+        "examType": "sample",
+        "label": "令和6年度 (2024) 国内旅行業務取扱管理者試験 出題例",
+        "westernYear": 2024
+      },
+      "R05": {
+        "total": 9,
+        "law": 3,
+        "terms": 3,
+        "practice": 3,
+        "examType": "official",
+        "label": "令和5年度 (2023) 国内旅行業務取扱管理者試験",
+        "westernYear": 2023
+      },
+      "R04": {
+        "total": 9,
+        "law": 3,
+        "terms": 3,
+        "practice": 3,
+        "examType": "official",
+        "label": "令和4年度 (2022) 国内旅行業務取扱管理者試験",
+        "westernYear": 2022
+      },
       "R03": {
         "total": 30,
         "law": 10,
         "terms": 10,
-        "practice": 10
+        "practice": 10,
+        "examType": "official",
+        "label": "令和3年度 (2021) 国内旅行業務取扱管理者試験",
+        "westernYear": 2021
       }
     },
     "errors": [],
     "sourceFiles": [
-      "content/past-exams/R03.json"
+      "content/past-exams/R03.json",
+      "content/past-exams/R04.json",
+      "content/past-exams/R05.json",
+      "content/past-exams/R06.json",
+      "content/past-exams/R07.json"
     ]
   }
 }

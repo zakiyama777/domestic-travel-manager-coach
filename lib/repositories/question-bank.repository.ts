@@ -163,7 +163,6 @@ export function pickPastExam(params: PastExamPickParams = {}): PastExamQuestion[
 
 export function getPastExamYears(): PastExamYearMeta[] {
   const pool = getBankPast().filter(isPastActive);
-  /** @type {Record<string, PastExamYearMeta>} */
   const map: Record<string, PastExamYearMeta> = {};
   for (const q of pool) {
     if (!map[q.year]) {
@@ -173,12 +172,14 @@ export function getPastExamYears(): PastExamYearMeta[] {
         westernYear: yearToWestern(q.year),
         counts: { law: 0, terms: 0, practice: 0 },
         total: 0,
+        examType: q.examType ?? 'official',
       };
     }
     map[q.year].counts[q.section]++;
     map[q.year].total++;
+    // 年度内の examType が複数ある場合は最初に現れたものを採用
   }
-  // 新しい年度 (R05, R04, R03, ...) を先頭に
+  // 新しい年度 (R07, R06, R05, ...) を先頭に
   return Object.values(map).sort((a, b) => b.year.localeCompare(a.year));
 }
 

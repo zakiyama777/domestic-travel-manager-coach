@@ -19,6 +19,13 @@ export type ExamYearKey = string;
 /** 試験区分 */
 export type ExamSection = SubjectId; // 'law' | 'terms' | 'practice'
 
+/**
+ * 試験タイプ
+ *  - 'official'  本試験（R03〜R05 など）
+ *  - 'sample'   出題例（R06・R07 の「問題例／解答例」形式）
+ */
+export type ExamType = 'official' | 'sample';
+
 /** 過去問 1 問 */
 export interface PastExamQuestion {
   /** グローバルユニークID。推奨: `pe-{year}-{section}-{q番号zero-padded}` */
@@ -62,6 +69,9 @@ export interface PastExamQuestion {
   /** false で配信停止。未指定は true 扱い */
   isActive?: boolean;
 
+  /** 本試験 / 出題例 の区別（未指定は official 扱い） */
+  examType?: ExamType;
+
   /** 任意 */
   subSection?: string;
   topic?: string;
@@ -83,6 +93,8 @@ export interface PastExamYearMeta {
   counts: Record<ExamSection, number>;
   /** 合計 */
   total: number;
+  /** 本試験 or 出題例（その年度に含まれる最初の examType を採用） */
+  examType?: ExamType;
 }
 
 /** セクション表示名 */
@@ -90,4 +102,10 @@ export const PAST_EXAM_SECTION_LABELS: Record<ExamSection, string> = {
   law: '旅行業法令',
   terms: '約款',
   practice: '国内旅行実務',
+};
+
+/** 試験タイプ表示名 */
+export const EXAM_TYPE_LABELS: Record<ExamType, string> = {
+  official: '本試験',
+  sample: '出題例',
 };

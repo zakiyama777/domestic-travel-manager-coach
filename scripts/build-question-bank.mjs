@@ -216,7 +216,7 @@ function normalizeRecord(raw, fileLabel) {
 }
 
 // ---------- past-exam normalizer ----------
-function normalizePastExamRecord(raw, fileLabel) {
+function normalizePastExamRecord(raw, fileLabel, fileMeta = {}) {
   const errs = [];
   const id = String(raw.id ?? '').trim();
   const year = String(raw.year ?? '').trim();
@@ -239,6 +239,16 @@ function normalizePastExamRecord(raw, fileLabel) {
   })();
   const sourcePage = raw.sourcePage !== undefined && raw.sourcePage !== ''
     ? Number(raw.sourcePage) : undefined;
+  // examType: per-row override → file _meta → default 'official'
+  const examType = (() => {
+    const candidates = [raw.examType, fileMeta.examType];
+    for (const v of candidates) {
+      if (!v) continue;
+      const s = String(v).trim().toLowerCase();
+      if (s === 'official' || s === 'sample') return s;
+    }
+    return 'official';
+  })();
   const isActive = (() => {
     if (raw.isActive === undefined || raw.isActive === '' || raw.isActive === null) return true;
     const s = String(raw.isActive).trim().toLowerCase();
@@ -321,6 +331,7 @@ function normalizePastExamRecord(raw, fileLabel) {
     ...(tags && tags.length ? { tags } : {}),
     ...(sourcePage !== undefined ? { sourcePage } : {}),
     ...(isActive === false ? { isActive: false } : {}),
+    examType,
   };
   return { ok: true, id, record };
 }
@@ -438,7 +449,10 @@ function main() {
 
   // ---------- past-exam pass ----------
   console.log('[build-question-bank] scanning past-exam:', PAST_DIR);
-  const pastFiles = walk(PAST_DIR).filter((p) => ['.csv', '.json'].includes(extname(p).toLowerCase()));
+  const pastFiles = walk(PAST_DIR)
+    // exclude template directory (starts with _)
+    .filter((p) => !p.includes(`${PAST_DIR}/_`))
+    .filter((p) => ['.csv', '.json'].includes(extname(p).toLowerCase()));
   /** @type {Record<string, true>} */
   const pastSeen = {};
   const past = [];
@@ -446,15 +460,37 @@ function main() {
   let pastTotalInput = 0;
   let pastDuplicates = 0;
 
+  /** @type {Record<string, { label?: string, westernYear?: number, examType?: string, source?: string, notes?: string }>} */
+  const yearMetaMap = {};
+
   for (const f of pastFiles) {
     const rel = f.replace(ROOT + '/', '');
     let rows = [];
+    let fileMeta = {};
     try {
       const text = readFileSync(f, 'utf8');
       if (extname(f).toLowerCase() === '.csv') rows = csvToObjects(text);
       else {
         const data = JSON.parse(text);
         rows = Array.isArray(data) ? data : Array.isArray(data.questions) ? data.questions : [];
+        if (!Array.isArray(data) && data && typeof data._meta === 'object') {
+          fileMeta = data._meta || {};
+          // yearMetaMap へ退避（存在すれば後続処理で使う）
+          const y = String(fileMeta.year ?? '').trim();
+          if (y) {
+            yearMetaMap[y] = {
+              label: fileMeta.label,
+              westernYear: fileMeta.westernYear,
+              examType:
+                typeof fileMeta.examType === 'string' &&
+                ['official', 'sample'].includes(fileMeta.examType.toLowerCase())
+                  ? fileMeta.examType.toLowerCase()
+                  : undefined,
+              source: fileMeta.source,
+              notes: fileMeta.notes,
+            };
+          }
+        }
       }
     } catch (e) {
       pastErrors.push({ id: '(parse)', reason: `[${rel}] ${String(e?.message ?? e)}` });
@@ -462,7 +498,7 @@ function main() {
     }
     for (const raw of rows) {
       pastTotalInput++;
-      const res = normalizePastExamRecord(raw, rel);
+      const res = normalizePastExamRecord(raw, rel, fileMeta);
       if (!res.ok) {
         pastErrors.push(...res.errors.map((r) => ({ id: res.id, reason: r })));
         continue;
@@ -490,7 +526,18 @@ function main() {
   // build per-year/per-section aggregates
   const byYear = {};
   for (const q of past) {
-    if (!byYear[q.year]) byYear[q.year] = { total: 0, law: 0, terms: 0, practice: 0 };
+    if (!byYear[q.year]) {
+      const m = yearMetaMap[q.year] || {};
+      byYear[q.year] = {
+        total: 0,
+        law: 0,
+        terms: 0,
+        practice: 0,
+        examType: m.examType || q.examType || 'official',
+        label: m.label,
+        westernYear: m.westernYear,
+      };
+    }
     byYear[q.year].total++;
     byYear[q.year][q.section]++;
   }
@@ -557,7 +604,8 @@ function main() {
   if (Object.keys(byYear).length) {
     console.log('  [past]   by year     :');
     for (const [y, c] of Object.entries(byYear)) {
-      console.log(`             ${y}: total ${c.total} (law ${c.law} / terms ${c.terms} / practice ${c.practice})`);
+      const tag = c.examType === 'sample' ? '[sample]' : '[official]';
+      console.log(`             ${y} ${tag}: total ${c.total} (law ${c.law} / terms ${c.terms} / practice ${c.practice})`);
     }
   }
   const allErrors = [...errors, ...pastErrors];
