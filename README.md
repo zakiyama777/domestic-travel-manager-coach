@@ -60,12 +60,25 @@ Firebase Auth (Anonymous) + Firestore を使った **クラウド同期** を内
 
 - [x] UI 基盤 v1 (初期 PR)
 - [x] UI 基盤 v1.5 (PWA / progress / session 永続化)
-- [x] Firebase Anonymous Auth + Firestore mirror (本 PR)
+- [x] Firebase Anonymous Auth + Firestore mirror
+- [x] **CSV/JSON 問題投入パイプライン (本 PR)** — `docs/question-import.md`
 - [ ] Google / Email Sign-In (匿名 uid マージ含む)
 - [ ] 弱点分析アルゴリズム (SM-2 / 忘却曲線)
 - [ ] Service Worker によるオフライン配信
-- [ ] PDF 問題インポート基盤
+- [ ] PDF 問題インポート（半自動）
 - [ ] 通知リマインド / 課金導線
+
+## 問題の追加方法（最短）
+
+```bash
+# 1) content/questions/ に CSV または JSON を追加
+# 2) 生成
+npm run build:questions
+# 3) 確認
+npm run dev  # /learn/binary, /learn/quad に反映
+```
+
+詳細は [`docs/question-import.md`](./docs/question-import.md) を参照。
 
 ## License
 

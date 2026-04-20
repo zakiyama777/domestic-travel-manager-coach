@@ -1,40 +1,41 @@
 import type { QuestionRepository } from '@/lib/repositories/types';
-import { MOCK_BINARY_QUESTIONS, MOCK_QUAD_QUESTIONS } from '@/lib/mock/questions';
+import type { SubjectId } from '@/lib/constants/subjects';
+import { pickBinary, pickQuad } from '@/lib/repositories/question-bank.repository';
 
-/** in-memory mock 実装。将来 Firestore 実装に差し替え可能。 */
-function pickBinary(params?: { limit?: number; subject?: string }) {
-  const limit = params?.limit ?? 10;
-  let items = [...MOCK_BINARY_QUESTIONS];
-  if (params?.subject) items = items.filter((q) => q.subject === params.subject);
-  return items.slice(0, limit);
-}
+/**
+ * QuestionRepository 実装（question-bank を経由）
+ * -------------------------------------------------
+ * - bank に投入されたデータがあればそれを優先
+ * - 無い場合は mock にフォールバック（question-bank/index.ts が担保）
+ * - 同期 API を維持し、loading forever を再発させない
+ */
 
-function pickQuad(params?: { limit?: number; subject?: string }) {
-  const limit = params?.limit ?? 5;
-  let items = [...MOCK_QUAD_QUESTIONS];
-  if (params?.subject) items = items.filter((q) => q.subject === params.subject);
-  return items.slice(0, limit);
+function narrowSubject(s?: string): SubjectId | undefined {
+  if (!s) return undefined;
+  if (s === 'law' || s === 'terms' || s === 'practice') return s;
+  return undefined;
 }
 
 export const questionRepository: QuestionRepository = {
   async fetchBinaryQuiz(params) {
-    return pickBinary(params);
+    return pickBinary({ limit: params?.limit ?? 10, subject: narrowSubject(params?.subject) });
   },
   async fetchQuadQuiz(params) {
-    return pickQuad(params);
+    return pickQuad({ limit: params?.limit ?? 5, subject: narrowSubject(params?.subject) });
   },
   getBinaryQuizSync(params) {
-    return pickBinary(params);
+    return pickBinary({ limit: params?.limit ?? 10, subject: narrowSubject(params?.subject) });
   },
   getQuadQuizSync(params) {
-    return pickQuad(params);
+    return pickQuad({ limit: params?.limit ?? 5, subject: narrowSubject(params?.subject) });
   },
 
   async submitAnswer(result) {
-    // 現状は console ログのみ。将来 Firestore の users/{uid}/answers に書き込み。
+    // 学習結果本体は progressRepository / sessionRepository が扱う。
+    // ここは将来 Firestore の answers コレクションに書き込む差し込み口。
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
-      console.debug('[mock] submitAnswer', result);
+      console.debug('[question] submitAnswer', result);
     }
   },
 };
