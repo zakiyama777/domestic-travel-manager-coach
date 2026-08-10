@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "year": "RXX",
+    "label": "令和XX年度 (20YY) 国内旅行業務取扱管理者試験",
+    "westernYear": 20,
+    "examType": "official",
+    "sourcePdfs": ["RXXmondai.pdf", "RXXkaitou_2.pdf"],
+    "source": "令和XX年度 国内旅行業務取扱管理者試験 問題・解答（AI Drive「国内旅行業務取扱管理者試験」）",
+    "notes": "この年度の JSON は、以下の手順で埋める。\n1. AI Drive の問題PDFと解答PDFを開く\n2. 下の questions[] を 1 問ずつ埋める（問番号は PDF 原典と一致させる）\n3. correctAnswer は 0-origin の index（例: 問題上の 3 番目が正解なら 2）\n4. npm run build:questions を実行してエラーがないことを確認\n5. /past/RXX/law などを確認\n※ examType は official = 本試験、sample = 出題例"
+  },
+  "questions": [
+    {
+      "id": "pe-RXX-law-01",
+      "category": "past_exam",
+      "year": "RXX",
+      "section": "law",
+      "originalQuestionNumber": 1,
+      "question": "（問題文をここに貼る）",
+      "choices": [
+        "選択肢1",
+        "選択肢2",
+        "選択肢3",
+        "選択肢4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "解答根拠を書く。最低限は条文・ページ番号でも可。",
+      "sourceLabel": "令和XX年度 国内旅行業務取扱管理者試験 旅行業法 問1",
+      "topic": "（任意：トピックラベル）",
+      "tags": ["（任意）"],
+      "sourcePage": 1
+    }
+  ]
+}

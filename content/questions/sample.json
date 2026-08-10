@@ -1,0 +1,30 @@
+{
+  "_note": "JSONで問題を追加するときのサンプル。questions 配列に CanonicalQuestion オブジェクトを並べる。CSVと混在可能。",
+  "questions": [
+    {
+      "id": "sample-json-b-0001",
+      "type": "binary",
+      "subject": "law",
+      "topic": "取扱管理者の選任",
+      "question": "旅行業者は、営業所ごとに旅行業務取扱管理者を2名以上選任しなければならない。",
+      "correctAnswer": "false",
+      "explanation": "旅行業法第11条の2により必要なのは1名以上です。2名以上ではありません。",
+      "difficulty": 1,
+      "tags": ["取扱管理者", "選任"],
+      "isActive": true
+    },
+    {
+      "id": "sample-json-q-0001",
+      "type": "quad",
+      "subject": "practice",
+      "topic": "日本三景",
+      "question": "次のうち、日本三景に含まれないものはどれか。",
+      "choices": ["松島", "天橋立", "宮島", "石見銀山"],
+      "correctAnswer": 4,
+      "explanation": "日本三景は松島・天橋立・宮島。石見銀山は世界文化遺産ですが三景ではありません。",
+      "difficulty": 1,
+      "tags": ["三景"],
+      "isActive": true
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "totalInput": 92,
+  "accepted": 92,
+  "skipped": 0,
+  "duplicates": 0,
+  "byType": {
+    "binary": 61,
+    "quad": 31
+  },
+  "bySubject": {
+    "law": {
+      "binary": 21,
+      "quad": 10
+    },
+    "terms": {
+      "binary": 20,
+      "quad": 10
+    },
+    "practice": {
+      "binary": 20,
+      "quad": 11
+    }
+  },
+  "errors": [],
+  "generatedAt": "2026-04-20T21:39:08.963Z",
+  "sourceFiles": [
+    "content/questions/sample.json",
+    "content/questions/seed-binary-law.csv",
+    "content/questions/seed-binary-practice.csv",
+    "content/questions/seed-binary-terms.csv",
+    "content/questions/seed-quad-law.csv",
+    "content/questions/seed-quad-practice.csv",
+    "content/questions/seed-quad-terms.csv"
+  ],
+  "past": {
+    "totalInput": 422,
+    "accepted": 422,
+    "skipped": 0,
+    "duplicates": 0,
+    "byYear": {
+      "R07": {
+        "total": 85,
+        "law": 25,
+        "terms": 25,
+        "practice": 35,
+        "examType": "sample",
+        "label": "令和7年度",
+        "westernYear": 2025
+      },
+      "R06": {
+        "total": 84,
+        "law": 25,
+        "terms": 25,
+        "practice": 34,
+        "examType": "sample",
+        "label": "令和6年度",
+        "westernYear": 2024
+      },
+      "R05": {
+        "total": 86,
+        "law": 25,
+        "terms": 25,
+        "practice": 36,
+        "examType": "official",
+        "label": "令和5年度",
+        "westernYear": 2023
+      },
+      "R04": {
+        "total": 81,
+        "law": 25,
+        "terms": 25,
+        "practice": 31,
+        "examType": "official",
+        "label": "令和4年度",
+        "westernYear": 2022
+      },
+      "R03": {
+        "total": 86,
+        "law": 25,
+        "terms": 25,
+        "practice": 36,
+        "examType": "official",
+        "label": "令和3年度",
+        "westernYear": 2021
+      }
+    },
+    "errors": [],
+    "sourceFiles": [
+      "content/past-exams/R03.json",
+      "content/past-exams/R04.json",
+      "content/past-exams/R05.json",
+      "content/past-exams/R06.json",
+      "content/past-exams/R07.json"
+    ]
+  }
+}

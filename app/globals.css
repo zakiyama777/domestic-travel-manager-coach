@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+ * Design Tokens — "Tabi Study"
+ * Apple的清潔感 × 和紙のような温かみ × 知性ある活字感
+ * ========================================================= */
+@layer base {
+  :root {
+    /* Surface */
+    --background: 36 20% 97.5%;       /* #F9F8F4 紙のオフホワイト(少し暖色に) */
+    --foreground: 222 47% 9%;         /* #0A1329 より深い活字色 */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 9%;
+
+    /* Brand — 深みのある藍 (静かな知性) */
+    --primary: 221 70% 32%;           /* #1A3D8F 落ち着いた藍 */
+    --primary-foreground: 0 0% 100%;
+    --accent: 172 68% 34%;            /* #1C9485 上品なティール */
+    --accent-foreground: 0 0% 100%;
+
+    /* Semantic */
+    --success: 160 70% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 11 78% 52%;            /* #D94B2B 落ち着いた珊瑚(弱点) */
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Neutral — hairline境界線を意識 */
+    --muted: 36 14% 93%;
+    --muted-foreground: 222 12% 42%;
+    --border: 220 14% 89%;
+    --input: 220 14% 89%;
+    --ring: 221 70% 32%;
+
+    /* Subject palette — より深みのある色味 */
+    --subject-law: 219 70% 42%;       /* 法令: 深青 */
+    --subject-terms: 262 48% 48%;     /* 約款: 落ち着いた紫 */
+    --subject-practice: 28 78% 46%;   /* 実務: キャメル */
+
+    --radius: 20px;
+
+    /* safe-area fallback */
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-top: env(safe-area-inset-top, 0px);
+  }
+
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    /* スマホ前提: 横スクロール抑止 */
+    overflow-x: hidden;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03', 'palt';
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+      'Noto Sans JP', 'Yu Gothic Medium', 'Yu Gothic', sans-serif;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    /* iOS Safariのプルリフレッシュ抑止 */
+    overscroll-behavior-y: contain;
+  }
+
+  /* 見出しはやや文字間を詰めて活字感を強める */
+  h1, h2, h3, h4 {
+    letter-spacing: -0.012em;
+  }
+
+  /* 数字は欧文フォントで揃える（ダッシュボードの数値が美しく見える） */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* =========================================================
+ * Utilities
+ * ========================================================= */
+@layer utilities {
+  /* 親指ゾーン安全領域 */
+  .pb-safe {
+    padding-bottom: calc(var(--safe-bottom) + 0.5rem);
+  }
+  .pt-safe {
+    padding-top: var(--safe-top);
+  }
+
+  /* 薄いガラス質感 */
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* スマホ中央コンテナ（最大幅480px） */
+  .app-container {
+    @apply mx-auto w-full max-w-[480px] px-5;
+  }
+
+  /* カード基本 */
+  .card-base {
+    @apply rounded-2xl bg-card shadow-soft;
+  }
+
+  /* hairline: 1px未満のような繊細な境界線 */
+  .hairline {
+    box-shadow: inset 0 0 0 1px hsl(var(--border) / 0.9);
+  }
+
+  /* プレミアムな金属的シャドウ */
+  .shadow-premium {
+    box-shadow:
+      0 0 0 1px hsl(220 20% 90% / 0.7),
+      0 1px 2px rgba(10, 19, 41, 0.04),
+      0 12px 32px -8px rgba(10, 19, 41, 0.08);
+  }
+
+  /* Safe area + 下部ナビ高さを考慮した画面終端パディング */
+  .pb-nav {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
+  }
+  .bottom-nav {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  }
+
+  /* ハイライト枠（触ったら押したくなるやつ） */
+  .tap-highlight {
+    transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .tap-highlight:active {
+    transform: scale(0.98);
+  }
+
+  /* グラデーション・テキスト */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* スクロールバー非表示（モバイル前提） */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

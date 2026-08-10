@@ -1,0 +1,1900 @@
+{
+  "R03": {
+    "law": [
+      "イ",
+      "エ",
+      "エ",
+      "イ",
+      "イ",
+      "ア",
+      "ウ",
+      "ウ",
+      "イ",
+      "ア",
+      "ア",
+      "ア",
+      "ウ",
+      "イ",
+      "エ",
+      "ア",
+      "イ",
+      "ウ",
+      "ウ",
+      "エ",
+      "ア",
+      "ウ",
+      "ア",
+      "ウ",
+      "エ"
+    ],
+    "terms": [
+      "エ",
+      "ウ",
+      "ウ",
+      "ア",
+      "エ",
+      "ウ",
+      "イ",
+      "ア",
+      "ア",
+      "ウ",
+      "イ",
+      "イ",
+      "エ",
+      "ア",
+      "イ",
+      "ア",
+      "エ",
+      "ア",
+      "エ",
+      "ウ",
+      "イ",
+      "エ",
+      "ウ",
+      "エ",
+      "イ"
+    ],
+    "practice": [
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "エ",
+        "y": 538,
+        "x": 179.9994354248047
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 551,
+        "x": 179.76300048828125
+      },
+      {
+        "parent": 1,
+        "kind": "paren",
+        "n": 3,
+        "ans": "エ",
+        "y": 563,
+        "x": 179.9994354248047
+      },
+      {
+        "parent": 1,
+        "kind": "paren",
+        "n": 4,
+        "ans": "エ",
+        "y": 575,
+        "x": 179.9994354248047
+      },
+      {
+        "parent": 1,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ア",
+        "y": 587,
+        "x": 180.00146484375
+      },
+      {
+        "parent": 2,
+        "kind": "paren",
+        "n": 2,
+        "ans": "エ",
+        "y": 613,
+        "x": 179.9994354248047
+      },
+      {
+        "parent": 2,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ア",
+        "y": 626,
+        "x": 179.9994354248047
+      },
+      {
+        "parent": 2,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ウ",
+        "y": 639,
+        "x": 179.75987243652344
+      },
+      {
+        "parent": 3,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 665,
+        "x": 179.7619171142578
+      },
+      {
+        "parent": 4,
+        "kind": "paren",
+        "n": 2,
+        "ans": "イ",
+        "y": 678,
+        "x": 180.4839324951172
+      },
+      {
+        "parent": 4,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ア",
+        "y": 691,
+        "x": 179.99830627441406
+      },
+      {
+        "parent": 4,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 704,
+        "x": 179.75875854492188
+      },
+      {
+        "parent": 4,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 717,
+        "x": 180.4839324951172
+      },
+      {
+        "parent": 4,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ウ",
+        "y": 730,
+        "x": 179.7630157470703
+      },
+      {
+        "parent": 5,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ア",
+        "y": 743,
+        "x": 179.9994354248047
+      },
+      {
+        "parent": 5,
+        "kind": "paren",
+        "n": 6,
+        "ans": "ウ",
+        "y": 756,
+        "x": 179.7630157470703
+      },
+      {
+        "parent": 5,
+        "kind": "paren",
+        "n": 7,
+        "ans": "ウ",
+        "y": 769,
+        "x": 179.7630157470703
+      },
+      {
+        "parent": 5,
+        "kind": "paren",
+        "n": 8,
+        "ans": "エ",
+        "y": 782,
+        "x": 180.00369262695312
+      },
+      {
+        "parent": 5,
+        "kind": "paren",
+        "n": 9,
+        "ans": "イ",
+        "y": 795,
+        "x": 180.47967529296875
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 538,
+        "x": 418.3243408203125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ア",
+        "y": 551,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 564,
+        "x": 419.04412841796875
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 4,
+        "ans": "エ",
+        "y": 575,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ア",
+        "y": 588,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 1,
+        "ans": "イ",
+        "y": 601,
+        "x": 419.04412841796875
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 2,
+        "ans": "イ",
+        "y": 614,
+        "x": 419.04412841796875
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 627,
+        "x": 419.04412841796875
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 4,
+        "ans": "イ",
+        "y": 640,
+        "x": 419.04412841796875
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 1,
+        "ans": "エ",
+        "y": 653,
+        "x": 418.5682678222656
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ア",
+        "y": 666,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ウ",
+        "y": 679,
+        "x": 418.3243408203125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 4,
+        "ans": "エ",
+        "y": 692,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ア",
+        "y": 705,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 2,
+        "ans": "イ",
+        "y": 717,
+        "x": 419.04412841796875
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ア",
+        "y": 730,
+        "x": 418.56390380859375
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 4,
+        "ans": "イ",
+        "y": 743,
+        "x": 419.04412841796875
+      }
+    ]
+  },
+  "R04": {
+    "law": [
+      "エ",
+      "イ",
+      "エ",
+      "ウ",
+      "ア",
+      "エ",
+      "イ",
+      "ウ",
+      "ア",
+      "エ",
+      "ウ",
+      "ア",
+      "イ",
+      "ウ",
+      "ア",
+      "イ",
+      "イ",
+      "ウ",
+      "エ",
+      "エ",
+      "ウ",
+      "イ",
+      "イ",
+      "ア",
+      "ア"
+    ],
+    "terms": [
+      "ア",
+      "イ",
+      "エ",
+      "ウ",
+      "イ",
+      "ア",
+      "エ",
+      "エ",
+      "イ",
+      "ウ",
+      "ア",
+      "エ",
+      "ア",
+      "ウ",
+      "ア",
+      "イ",
+      "イ",
+      "ウ",
+      "ア",
+      "ウ",
+      "エ",
+      "イ",
+      "イ",
+      "エ",
+      "ウ"
+    ],
+    "practice": [
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "エ",
+        "y": 534,
+        "x": 204.9566650390625
+      },
+      {
+        "parent": null,
+        "kind": "sub",
+        "n": 2,
+        "ans": "エ",
+        "y": 560,
+        "x": 204.9566650390625
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 597,
+        "x": 204.71568298339844
+      },
+      {
+        "parent": null,
+        "kind": "sub",
+        "n": 1,
+        "ans": "エ",
+        "y": 610,
+        "x": 204.9566650390625
+      },
+      {
+        "parent": null,
+        "kind": "sub",
+        "n": 2,
+        "ans": "イ",
+        "y": 623,
+        "x": 205.44253540039062
+      },
+      {
+        "parent": null,
+        "kind": "sub",
+        "n": 3,
+        "ans": "ア",
+        "y": 636,
+        "x": 204.95855712890625
+      },
+      {
+        "parent": null,
+        "kind": "sub",
+        "n": 1,
+        "ans": "ウ",
+        "y": 649,
+        "x": 204.7156982421875
+      },
+      {
+        "parent": null,
+        "kind": "sub",
+        "n": 2,
+        "ans": "イ",
+        "y": 662,
+        "x": 205.4443359375
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 675,
+        "x": 204.7156524658203
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "エ",
+        "y": 687,
+        "x": 204.956787109375
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "イ",
+        "y": 700,
+        "x": 205.4443359375
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "エ",
+        "y": 713,
+        "x": 204.95855712890625
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ウ",
+        "y": 726,
+        "x": 204.7156982421875
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ア",
+        "y": 739,
+        "x": 204.95669555664062
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ウ",
+        "y": 752,
+        "x": 204.71568298339844
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 6,
+        "ans": "ア",
+        "y": 765,
+        "x": 204.9585723876953
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "エ",
+        "y": 535,
+        "x": 443.5218811035156
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 548,
+        "x": 443.27899169921875
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 560,
+        "x": 443.9966125488281
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 4,
+        "ans": "エ",
+        "y": 572,
+        "x": 443.5218811035156
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ア",
+        "y": 584,
+        "x": 443.5218811035156
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 1,
+        "ans": "イ",
+        "y": 597,
+        "x": 443.99658203125
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 2,
+        "ans": "イ",
+        "y": 610,
+        "x": 443.99658203125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ア",
+        "y": 623,
+        "x": 443.5218505859375
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ウ",
+        "y": 636,
+        "x": 443.27899169921875
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 5,
+        "ans": "イ",
+        "y": 649,
+        "x": 443.99658203125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 1,
+        "ans": "エ",
+        "y": 662,
+        "x": 443.5218505859375
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ア",
+        "y": 675,
+        "x": 443.5218811035156
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 688,
+        "x": 443.99658203125
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 4,
+        "ans": "エ",
+        "y": 701,
+        "x": 443.5218811035156
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ウ",
+        "y": 714,
+        "x": 443.27899169921875
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 727,
+        "x": 443.27899169921875
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ア",
+        "y": 740,
+        "x": 443.5218811035156
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 753,
+        "x": 443.99658203125
+      }
+    ]
+  },
+  "R05": {
+    "law": [
+      "イ",
+      "ア",
+      "ア",
+      "ア",
+      "エ",
+      "ウ",
+      "イ",
+      "イ",
+      "エ",
+      "ウ",
+      "ウ",
+      "エ",
+      "ウ",
+      "イ",
+      "エ",
+      "ア",
+      "エ",
+      "ウ",
+      "イ",
+      "ウ",
+      "ア",
+      "エ",
+      "イ",
+      "ア",
+      "イ"
+    ],
+    "terms": [
+      "エ",
+      "イ",
+      "イ",
+      "イ",
+      "ア",
+      "エ",
+      "ア",
+      "イ",
+      "ウ",
+      "イ",
+      "ウ",
+      "エ",
+      "ウ",
+      "エ",
+      "エ",
+      "ウ",
+      "ウ",
+      "エ",
+      "ア",
+      "ア",
+      "エ",
+      "ア",
+      "ウ",
+      "ア",
+      "イ"
+    ],
+    "practice": [
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "エ",
+        "y": 528,
+        "x": 204.96083068847656
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "イ",
+        "y": 541,
+        "x": 205.44107055664062
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ア",
+        "y": 565,
+        "x": 204.96083068847656
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 578,
+        "x": 204.7212677001953
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ウ",
+        "y": 604,
+        "x": 204.7198486328125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ア",
+        "y": 617,
+        "x": 204.95941162109375
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ア",
+        "y": 630,
+        "x": 204.9608612060547
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 6,
+        "ans": "エ",
+        "y": 643,
+        "x": 204.95941162109375
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 656,
+        "x": 204.7198486328125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "イ",
+        "y": 669,
+        "x": 205.44107055664062
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "イ",
+        "y": 682,
+        "x": 205.4396514892578
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 695,
+        "x": 204.7198486328125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ウ",
+        "y": 708,
+        "x": 204.7198486328125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ア",
+        "y": 721,
+        "x": 204.96083068847656
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ウ",
+        "y": 734,
+        "x": 204.7212677001953
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 6,
+        "ans": "イ",
+        "y": 747,
+        "x": 205.4396514892578
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 7,
+        "ans": "ウ",
+        "y": 760,
+        "x": 204.7198486328125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ウ",
+        "y": 528,
+        "x": 443.2843017578125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 2,
+        "ans": "エ",
+        "y": 541,
+        "x": 443.52392578125
+      },
+      {
+        "parent": null,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 553,
+        "x": 444.004150390625
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ア",
+        "y": 566,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 5,
+        "ans": "エ",
+        "y": 579,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 6,
+        "ans": "イ",
+        "y": 592,
+        "x": 444.004150390625
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 1,
+        "ans": "イ",
+        "y": 605,
+        "x": 444.004150390625
+      },
+      {
+        "parent": 6,
+        "kind": "paren",
+        "n": 2,
+        "ans": "エ",
+        "y": 618,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 3,
+        "ans": "エ",
+        "y": 631,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 4,
+        "ans": "エ",
+        "y": 644,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ア",
+        "y": 657,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 7,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 669,
+        "x": 443.2843017578125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 3,
+        "ans": "イ",
+        "y": 682,
+        "x": 444.004150390625
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 4,
+        "ans": "ア",
+        "y": 695,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 5,
+        "ans": "ア",
+        "y": 708,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 1,
+        "ans": "ア",
+        "y": 721,
+        "x": 443.52392578125
+      },
+      {
+        "parent": 8,
+        "kind": "paren",
+        "n": 2,
+        "ans": "ウ",
+        "y": 734,
+        "x": 443.2843017578125
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 3,
+        "ans": "ウ",
+        "y": 747,
+        "x": 443.2843017578125
+      },
+      {
+        "parent": 9,
+        "kind": "paren",
+        "n": 4,
+        "ans": "イ",
+        "y": 760,
+        "x": 444.004150390625
+      }
+    ]
+  },
+  "R06": {
+    "law": [
+      {
+        "parent": 1,
+        "sub": null,
+        "ans": "イ・エ"
+      },
+      {
+        "parent": 2,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 3,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 4,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 5,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 6,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 7,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 8,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 9,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 10,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 11,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 12,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 13,
+        "sub": null,
+        "ans": "ア・イ・ウ・エ"
+      },
+      {
+        "parent": 14,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 15,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 16,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 17,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 18,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 19,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 20,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 21,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 22,
+        "sub": null,
+        "ans": "ア・イ・ウ・エ"
+      },
+      {
+        "parent": 23,
+        "sub": null,
+        "ans": "ア・ウ・エ"
+      },
+      {
+        "parent": 24,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 25,
+        "sub": null,
+        "ans": "ア"
+      }
+    ],
+    "terms": [
+      {
+        "parent": 26,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 27,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 28,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 29,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 30,
+        "sub": null,
+        "ans": "ア・イ"
+      },
+      {
+        "parent": 31,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 32,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 33,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 34,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 35,
+        "sub": null,
+        "ans": "イ・エ"
+      },
+      {
+        "parent": 36,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 37,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 38,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 39,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 40,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 41,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 42,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 43,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 44,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 45,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 46,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 47,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 48,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 49,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 50,
+        "sub": null,
+        "ans": "ウ"
+      }
+    ],
+    "practice": [
+      {
+        "parent": 51,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 52,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 53,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 54,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 55,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 56,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 56,
+        "sub": 1,
+        "ans": "イ"
+      },
+      {
+        "parent": 57,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 58,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 59,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 60,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 61,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 62,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 63,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 64,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 65,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 66,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 67,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 68,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 69,
+        "sub": 3,
+        "ans": "エ"
+      },
+      {
+        "parent": 69,
+        "sub": 4,
+        "ans": "イ"
+      },
+      {
+        "parent": 70,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 71,
+        "sub": null,
+        "ans": "ア・イ・エ"
+      },
+      {
+        "parent": 72,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 73,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 74,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 75,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 76,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 77,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 78,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 79,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 80,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 81,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 82,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 83,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 84,
+        "sub": null,
+        "ans": "ウ"
+      }
+    ]
+  },
+  "R07": {
+    "law": [
+      {
+        "parent": 1,
+        "sub": null,
+        "ans": "ア・エ"
+      },
+      {
+        "parent": 2,
+        "sub": null,
+        "ans": "ア・ウ・エ"
+      },
+      {
+        "parent": 3,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 4,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 5,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 6,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 7,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 8,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 9,
+        "sub": null,
+        "ans": "ア・イ・エ"
+      },
+      {
+        "parent": 10,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 11,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 12,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 13,
+        "sub": null,
+        "ans": "ア・エ"
+      },
+      {
+        "parent": 14,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 15,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 16,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 17,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 18,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 19,
+        "sub": null,
+        "ans": "ア・ウ"
+      },
+      {
+        "parent": 20,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 21,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 22,
+        "sub": null,
+        "ans": "イ・ウ・エ"
+      },
+      {
+        "parent": 23,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 24,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 25,
+        "sub": null,
+        "ans": "イ"
+      }
+    ],
+    "terms": [
+      {
+        "parent": 26,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 27,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 28,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 29,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 30,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 31,
+        "sub": null,
+        "ans": "イ・ウ"
+      },
+      {
+        "parent": 32,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 33,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 34,
+        "sub": null,
+        "ans": "ア・イ・エ"
+      },
+      {
+        "parent": 35,
+        "sub": null,
+        "ans": "ウ・エ"
+      },
+      {
+        "parent": 36,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 37,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 38,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 39,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 40,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 41,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 42,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 43,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 44,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 45,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 46,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 47,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 48,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 49,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 50,
+        "sub": null,
+        "ans": "ウ"
+      }
+    ],
+    "practice": [
+      {
+        "parent": 51,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 52,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 53,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 54,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 55,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 56,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 57,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 58,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 59,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 60,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 61,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 62,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 63,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 64,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 65,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 66,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 67,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 68,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 69,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 70,
+        "sub": 3,
+        "ans": "エ"
+      },
+      {
+        "parent": 70,
+        "sub": 4,
+        "ans": "イ"
+      },
+      {
+        "parent": 71,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 72,
+        "sub": null,
+        "ans": "イ・ウ・エ"
+      },
+      {
+        "parent": 73,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 74,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 75,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 76,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 77,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 78,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 79,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 80,
+        "sub": null,
+        "ans": "エ"
+      },
+      {
+        "parent": 81,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 82,
+        "sub": null,
+        "ans": "ア"
+      },
+      {
+        "parent": 83,
+        "sub": null,
+        "ans": "ウ"
+      },
+      {
+        "parent": 84,
+        "sub": null,
+        "ans": "イ"
+      },
+      {
+        "parent": 85,
+        "sub": null,
+        "ans": "イ"
+      }
+    ]
+  }
+}
